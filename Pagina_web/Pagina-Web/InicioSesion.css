@@ -1,0 +1,20 @@
+
+.login{
+    border: 2px solid;
+    padding: 20px;
+    width: 35%;
+    height: auto;
+    background-color: hsl(221, 62%, 80%);
+    position:relative; /* Hacee falta conocer mas acerca de position, tal vez fixed*/
+    text-align: center;
+    box-sizing: border-box;
+
+}
+#img_InicioSesion{
+    float: right;
+    height: auto;
+}
+
+#img_Logo_Inicio{
+    float:inline-start
+}
