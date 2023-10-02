@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Paginas.css">
+    <title>Comedores</title>
+</head>
+<body>
+    
+    <!-- Menu desplegable -->
+    <div class="contenedor">
+        <img id="Logo" src="Recursos/Imagenes/Logo.webp" width="35%" id="img_Logo_Inicio">
+        <nav class="barra"?>
+            <ul class="lista-barra">
+                <li class="elemento-lista">     <!-- Pantalla de menu principal -->
+                    <a href="MenuPrincipal.html">Menu</a>
+                </li>
+                <li class="elemento-lista opciones">    <!-- Lista desplegable de gráficas -->
+                    <a href="#">Indicadores
+                        <svg class="icono-desplegable" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M7 10l5 5 5-5H7z"/></svg>
+                    </a>
+                    <ul class="desplegar">
+                        <li>    <!-- Pantalla de gráficas generales -->
+                            <a href="Graficas_comedores.html">General</a>
+                        </li>
+                        <li>    <!-- Pantalla de gráficas por comedor -->
+                            <a href="Graficas_comedor.html">Por comedor</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="elemento-lista opciones">      
+                    <a href="#">Administracion
+                        <svg class="icono-desplegable" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M7 10l5 5 5-5H7z"/></svg>
+                    </a>
+                    <ul class="desplegar">
+                        <li>    <!-- Pantalla de administracion de encargados -->
+                            <a href="Administracion_encargados.html">Encargados</a>
+                        </li>
+                        <li>    <!-- Pantalla de administracion de supervisores -->
+                            <a href="Administracion_supervisores.html">Supervisores</a>
+                        </li>
+                        <li>    <!-- Pantalla de administracion de comedores -->
+                            <a href="Administracion_comedores.html">Comedores</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <ul class="accordion">
+        <li>
+            <input type="radio" name="accordion" id="first" checked>
+            <label for="first">Products</label>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nostrum excepturi similique quos, sed possimus totam quis natus quidem eligendi aperiam cupiditate sunt quia dicta fuga. Nemo ab praesentium quaerat.</p>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="accordion" id="second">
+            <label for="second">Products</label>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nostrum excepturi similique quos, sed possimus totam quis natus quidem eligendi aperiam cupiditate sunt quia dicta fuga. Nemo ab praesentium quaerat.</p>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="accordion" id="third">
+            <label for="third">Information</label>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nostrum excepturi similique quos, sed possimus totam quis natus quidem eligendi aperiam cupiditate sunt quia dicta fuga. Nemo ab praesentium quaerat.</p>
+            </div>
+        </li>
+    </ul>
+    
+</body>
+</html>

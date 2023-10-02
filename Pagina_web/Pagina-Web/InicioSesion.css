@@ -1,4 +1,9 @@
 
+/* Ayudame a que .login este en la parte izquieda de la pantalla debajo de un logo. Que este permanentemente en ese lugar centrado con un cuadro de fondo con bordes circulares*/
+body{
+    background-color: url(Recursos/Imagenes/);
+}
+
 .login{
     border: 2px solid;
     padding: 20px;
@@ -8,8 +13,10 @@
     position:relative; /* Hacee falta conocer mas acerca de position, tal vez fixed*/
     text-align: center;
     box-sizing: border-box;
-
+    border-radius: 10px;
 }
+
+
 #img_InicioSesion{
     float: right;
     height: auto;

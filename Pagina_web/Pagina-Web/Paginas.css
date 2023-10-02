@@ -1,0 +1,170 @@
+/****************************
+ Barra superior de navegación
+*****************************/
+
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background: #edb4c2;
+    color: #4D4D4D;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+
+#Logo{
+    width: auto;
+    height: 70px;
+    margin-left: 20px;
+    padding: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.contenedor {
+    display: flex;
+    font-size: 14px;
+    height: 17vh;
+    width: 100%;
+    top: 0;
+    background:#d0d0d0;
+    position: fixed;
+
+}
+
+.barra{
+    margin: auto;
+    margin-left: 40px;
+    padding: 0.5rem 1.5rem;
+    background:#c5d608;
+    border-radius: 1rem;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+.lista-barra{
+    display: flex;
+    gap: 1rem;
+}
+
+.elemento-lista, .desplegar li{
+    list-style: none;
+    height: 100%;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+.desplegar{
+    position: absolute;
+    padding: 0.5rem 0;
+    margin: 0.5rem -0.5rem;
+    background:#71A6D9;
+    color:black;
+    box-shadow: 0 4px 12px I Orgba(e, e, 0, 0.1);
+    border-radius: 0.5rem;
+    font-size: 12px;
+    display: none;                 
+ }
+
+ .elemento-lista:hover {
+    background-color:#8C72B2;
+    color:#E9839C;
+    border-radius: 0.5rem;
+ }
+
+ .opciones:hover .desplegar{
+    display: block;
+ }
+
+ .opciones a {
+    display: flex;
+    align-items: center;
+ }
+
+ .opciones .icono-desplegable{
+    font-size: 18px;
+    position: relative;
+    right: -5px;
+    transform: rotate (Odeg);
+    transition: 0.3s ease-in-out all;
+ }
+
+ .opciones:hover .icono-desplegable {
+    transform: rotate (180deg);
+
+}
+.desplegar li:hover {
+    background:black;
+    color:#4D4D4D;
+    border-radius: 0.5rem;
+}
+
+/***********************
+ Acordeón de información
+************************/
+
+.accordion{
+    padding-top: 8%;
+    padding-left: 15%;
+    width: 1000px;
+}
+
+.accordion li{
+    list-style:none;
+    width: 100%;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background:#f797c9;
+    box-shadow: 6px 6px 10px -1px #b465799d,
+                -6px -6px 10px -1px #fcd5dc;
+}
+
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+label::before{
+    content: '+';
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.accordion .content{
+    color: #555;
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 400px;
+    padding: 10px 10px 20px; 
+}
+
+.accordion input[type="radio"]:checked + label::before{
+    content: '-';
+}
+
