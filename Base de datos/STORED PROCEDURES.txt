@@ -1,0 +1,96 @@
+TRIGGERS:
+
+Mandar alerta al cambiar el estado del comedor (UPDATE)
+
+
+
+STORED PROCEDURES:
+
+COMEDOR BD
+
+-- INSERTADO DE DATOS
+
+WEB
+[*] Empleado
+	Supervisor
+	Encargado
+WEB
+[*] Comedor
+
+APP
+[*] Menu
+
+APP
+[*] Comensal ("Registro")
+
+APP
+[*] Asistencia
+
+APP
+[*] Incidencias
+
+
+-- CONSULTAR DATOS (QUERIES GRÁFICAS)
+
+[*] Login del empleado 
+	Supervisor WEB
+	Encargado APP
+
+WEB
+[*] Empleado (Catálogo)
+	Supervisor
+	Encargado
+
+WEB
+[*] Comedor (Catálogo)
+
+WEB / APP (Comensal)
+[*] Incidencias (Ver reporte)
+
+APP
+[*] Comedor (Catálogo) (Correo del Encargado) [Parámetro --> Encargado]
+	Para funcionalidad interna, App -> Voluntarios
+
+APP
+[*] Sexo (Catálogo)
+
+APP
+[*] Condicion (Catálogo)
+
+APP
+[*] TipoRacion (Catálogo)
+
+APP
+[*] Reporte (Datos para llenar el reporte)
+	LeaderBoard (Sección de Dashboard)
+
+APP
+[*] Menu (App -> Comensales)
+
+WEB
+[*] Gráficas (Vista general y por comedor[QUÉ COMEDOR])
+
+
+
+-- ACTUALIZAR DATOS
+
+WEB
+[*] Empleado
+
+[*] Contraseñas - Empleados
+
+WEB
+[*] Comedor
+
+
+[*] Comedor 
+	EstadoComedor (App -> Comensales)
+
+
+-- BORRADO DE DATOS
+
+WEB
+[*] Empleado
+
+
+
