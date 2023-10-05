@@ -1,0 +1,122 @@
+TABLAS A CAMBIAR: Empleado, Incidencias
+
+APIs Implementados:
+
+
+
+
+SP's OK
+PROC_IEmpleadoS
+PROC_IEmpleadoE
+PROC_IComedor
+PROC_IMenu
+PROC_IIncidencias
+PROC_IComensal
+PROC_ICondCom
+PROC_IAsistenciaC
+PROC_IAsistenciaT
+
+
+
+TRIGGERS:
+
+Mandar alerta al cambiar el estado del comedor (UPDATE)
+
+
+
+STORED PROCEDURES:
+
+COMEDOR BD
+
+-- INSERTADO DE DATOS
+
+WEB
+[*] Empleado
+	Supervisor
+	Encargado
+WEB
+[*] Comedor
+
+APP
+[*] Menu
+
+APP
+[*] Comensal ("Registro")
+
+APP
+[*] Asistencia
+
+APP (Comensales)
+[] Encuesta 
+
+
+-- CONSULTAR DATOS (QUERIES GRÁFICAS)
+
+[*] Login del empleado 
+	Supervisor WEB
+	Encargado APP
+
+WEB
+[*] Empleado (Catálogo)
+	Supervisor
+	Encargado
+
+APP
+[*] Comedor (Catálogo) (Correo del Encargado) [Parámetro --> Encargado]
+	Para funcionalidad interna, App -> Voluntarios
+
+APP
+[*] Sexo (Catálogo)
+
+APP
+[*] Condicion (Catálogo)
+
+APP
+[*] TipoRacion (Catálogo)
+
+APP
+[*] Reporte (Datos para llenar el reporte)
+
+APP
+[*] Menu (App -> Comensales)
+
+WEB
+[*] Gráficas (Vista general y por comedor[QUÉ COMEDOR])
+
+WEB from APP (Comensales)
+[] Visualizar las respuestas de las encuestas, por comedor y fecha
+
+APP (Comensales)
+[] Correo de un Supervisor para PEDIR AYUDA
+
+APP (Comensales)
+[] Comedor (Catálogo) --> Solo el nombre
+
+APP (Comensales)
+[] Comedor (Checar el estado) --> Como parámetro el nombre del comedor
+
+
+-- ACTUALIZAR DATOS
+
+WEB
+[*] Empleado
+	Supervisor
+	Encargado
+
+WEB
+[*] Comedor
+
+
+[*] Comedor 
+	EstadoComedor (App -> Comensales)
+
+
+-- BORRADO DE DATOS
+
+WEB
+[*] Empleado
+	Supervisor
+	Encargado
+
+
+
