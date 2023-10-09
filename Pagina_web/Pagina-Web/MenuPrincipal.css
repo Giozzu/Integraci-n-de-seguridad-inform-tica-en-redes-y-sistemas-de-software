@@ -1,3 +1,11 @@
+html{                           /*a lo mejor lo quito?*/
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Noto Sans';
+}
+
 .Logo{
     position: relative;
     left: 50%

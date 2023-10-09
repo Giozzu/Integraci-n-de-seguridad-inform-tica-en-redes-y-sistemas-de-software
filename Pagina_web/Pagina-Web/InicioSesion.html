@@ -6,22 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />              <!-- Pagina responsiva / mobile first -->
     <title>Inicio de sesión</title>
     <link rel="stylesheet" href="InicioSesion.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,200;0,400;0,800;1,800&display=swap" rel="stylesheet">
 
 </head>
 <body>
-
-    <img src="Recursos/Imagenes/Logo.webp" width="35%" id="img_Logo_Inicio">            <!-- Logo de la empresa -->
-    <img src="Recursos/Imagenes/InicioSesion.webp" width="65%" id="img_InicioSesion">   <!-- Imagen de inicio de sesion -->
-    <div class="login"> <!-- Bloque para el inicio de sesion -->
+    <img src="Recursos/Imagenes/Logo.webp" id="img_logo_inicio">  
+    <img src="Recursos/Imagenes/escudo-atz.webp" id="img_escudo">
+    <div class="titulo">
+        <p class="gradiente-animacion" >Comedores</p>  
+        <p class="gradiente-animacion">Comunitarios</p>  
+    </div>
+             <!-- Logo de la empresa -->
+       
+    <div class="wrapper"> <!-- Bloque para el inicio de sesion -->
+        <div class="input-data">
+            <input type="text" required>
+            <div class="underline"></div>
+            <label>Usuario</label>
+        </div>
         
-        
-        <form action="index.js" method="POST">                                           <!--enctype="multipart/form-data" Posible opcion para encriptar nuestros datos-->      
-            <input type="text" required placeholder="Usuario"> <br>
+        <!--<form action="index.js" method="POST">                                           <!--enctype="multipart/form-data" Posible opcion para encriptar nuestros datos-->      
+            <!--<input type="text" required placeholder="Usuario"> <br>
             <br>
             <input type="password" required placeholder="Contraseña"> <br>
             <br>
             <input type="submit" href="MenuPrincipal.html">
-        </form>
+        </form> -->
+        <div class="input-data">
+            <input type="password" required>
+            <div class="underline"></div>
+            <label>Contraseña</label>
+        </div>
 
     </div>
     
