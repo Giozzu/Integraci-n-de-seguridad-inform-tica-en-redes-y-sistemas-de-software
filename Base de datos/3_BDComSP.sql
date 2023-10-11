@@ -80,7 +80,7 @@ BEGIN
 
 	SELECT @ComedorBusq = (SELECT IDComedor FROM Comedor WHERE Nombre LIKE @NombreComedor) 
 	
-	INSERT INTO Incidencias 
+	INSERT INTO Incidencia
 	VALUES (@ComedorBusq, @Tipo, @Descripcion, @Fecha)
 END;
 GO
@@ -412,8 +412,8 @@ CREATE OR ALTER PROCEDURE PROC_CIncidencias
 AS
 BEGIN	
 	SELECT Nombre AS Comedor, Tipo, Descripcion, Fecha 
-	FROM Incidencias
-	JOIN Comedor ON Incidencias.IDComedor = Comedor.IDComedor 
+	FROM Incidencia
+	JOIN Comedor ON Incidencia.IDComedor = Comedor.IDComedor 
 	WHERE Fecha LIKE @Fecha
 END;
 GO
@@ -529,7 +529,7 @@ BEGIN
 
 	SELECT SopaArroz, PlatoFuerte, PanTortilla, AguaDelDia, FrijolesSalsa
 	FROM Menu
-	WHERE (IDComedor = @ComedorBusq) AND (Fecha LIKE @Fecha)
+	WHERE (IDComedor = @ComedorBusq) AND (Fecha LIKE @Fecha) AND (IDMenu = IDENT_CURRENT('Menu'))
 END;
 GO
 
@@ -543,7 +543,7 @@ BEGIN
 	SELECT @ComedorBusq = (SELECT IDComedor FROM Comedor WHERE Nombre LIKE @NombreComedor)
 
 	SELECT Tipo, Descripcion, Fecha 
-	FROM Incidencias
+	FROM Incidencia
 	WHERE (IDComedor = @ComedorBusq) AND (Fecha LIKE @Fecha)
 END;
 GO
