@@ -57,7 +57,7 @@ GO
 --Menú
 CREATE OR ALTER PROCEDURE PROC_IMenu
 @NombreComedor AS VARCHAR(30), @SopaArroz AS VARCHAR(50), @PlatoFuerte AS VARCHAR(50),
-@PanToritilla AS VARCHAR(50), @AguaDelDia AS VARCHAR(30), @FrijolesSalsa AS VARCHAR(50),
+@PanTortilla AS VARCHAR(50), @AguaDelDia AS VARCHAR(30), @FrijolesSalsa AS VARCHAR(50),
 @Fecha AS DATE
 AS
 BEGIN
@@ -66,7 +66,7 @@ BEGIN
 	SELECT @ComedorBusq = (SELECT IDComedor FROM Comedor WHERE Nombre LIKE @NombreComedor) 
 	
 	INSERT INTO Menu 
-	VALUES (@ComedorBusq, @SopaArroz, @PlatoFuerte, @PanToritilla, @AguaDelDia, @FrijolesSalsa, 13.00, @Fecha)
+	VALUES (@ComedorBusq, @SopaArroz, @PlatoFuerte, @PanTortilla, @AguaDelDia, @FrijolesSalsa, 13.00, @Fecha)
 END;
 GO
 
@@ -429,21 +429,17 @@ BEGIN
     DECLARE @Sal AS VARCHAR(32);
     DECLARE @ContraseñaHash AS VARCHAR(96);
 
-    -- Primero, asigna los valores a las variables
     SELECT @ContraseñaGuardada = Contraseña, @Sal = SUBSTRING(Contraseña, 1, 32)
     FROM Empleado
     WHERE NombreUsuario LIKE @NombreUsuario AND IDRol = 2;
 
-    -- Luego, calcula el valor de @ContraseñaHash
     SET @ContraseñaHash = @Sal + CONVERT(VARCHAR(64), HASHBYTES('SHA2_256', @Sal + @Contraseña), 2);
 
-    -- Ahora, puedes realizar la recuperación de datos y la asignación de @Exito
     SELECT Comedor.Nombre
     FROM Empleado
     JOIN Comedor ON Empleado.IDEmpleado = Comedor.IDEmpleado
     WHERE Empleado.NombreUsuario LIKE @NombreUsuario;
 
-    -- Asigna el valor de @Exito después de la consulta
     SET @Exito = CASE WHEN @ContraseñaHash = @ContraseñaGuardada THEN 1 ELSE 0 END;
 END;
 GO
@@ -531,7 +527,7 @@ BEGIN
 
 	SELECT @ComedorBusq = (SELECT IDComedor FROM Comedor WHERE Nombre LIKE @NombreComedor)
 
-	SELECT SopaArroz, PlatoFuerte, PanToritilla, AguaDelDia, FrijolesSalsa
+	SELECT SopaArroz, PlatoFuerte, PanTortilla, AguaDelDia, FrijolesSalsa
 	FROM Menu
 	WHERE (IDComedor = @ComedorBusq) AND (Fecha LIKE @Fecha)
 END;
