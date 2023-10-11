@@ -165,11 +165,11 @@ app.post('/loginEncargado', async(req, res) => {
     if(result.output.Exito == true) {
       return res.status(201).send({table});
     } else {
-      return res.status(401).send('Nombre de Usuario y/o contraseña incorrecta');
+      return res.status(401).json({message: 'Nombre de Usuario y/o contraseña incorrecta'});
     }
     
   } catch (err) {
-    return res.status(500).send('Error en la conexión a la BD');
+    return res.status(500).json({message: 'Error en la conexión a la BD'});
   }
 });
 
@@ -191,10 +191,10 @@ app.post('/insertaMenu', async(req, res) => {
     request.input('Fecha', mssql.Date, fecha);
     const result = await request.execute('PROC_IMenu');
     
-    return res.status(200).send('Menú agregado');
+    return res.status(200).json({message: 'Menú agregado'});
     
   } catch (err) {
-    return res.status(500).send('Error al insertar el menú');
+    return res.status(500).json({message: 'Error al insertar el menú'});
   }
 });
 
@@ -213,10 +213,10 @@ app.post('/insertaIncidencia', async(req, res) => {
     request.input('Fecha', mssql.Date, fecha);
     const result = await request.execute('PROC_IIncidencias');
     
-    return res.status(200).send('Incidencia agregada');
+    return res.status(200).json({message: 'Incidencia reportada'});
     
   } catch (err) {
-    return res.status(500).send('Error al insertar la incidencia');
+    return res.status(500).json({message: 'Error al reportar la incidencia'});
   }
 });
 
@@ -249,7 +249,7 @@ app.post('/insertaComensalCond', async(req, res) => {
     return res.status(201).send({token})
     
   } catch (err) {
-    return res.status(401).send('Error, puede que el Comensal ya esté registrado');
+    return res.status(401).json({message: 'Error, puede que el Comensal ya esté registrado'});
   }
 });
 
@@ -267,7 +267,6 @@ app.post('/insertaAsistencia', async(req, res) => {
     request.input('Raciones', mssql.Int, raciones);
     request.input('Fecha', mssql.Date, fecha);
     
-    // Cambio a 5 en If
     if (String(tipoAcceso).length == 5) {
       request.input('Token', mssql.Int, tipoAcceso);
       const result = await request.execute('PROC_IAsistenciaT');
@@ -276,10 +275,10 @@ app.post('/insertaAsistencia', async(req, res) => {
       const result = await request.execute('PROC_IAsistenciaC');
     }
     
-    return res.status(200).send('Asistencia agregada');
+    return res.status(200).json({message: 'Asistencia registrada'});
     
   } catch (err) {
-    return res.status(500).send('Error al insertar la asistencia');
+    return res.status(500).json({message: 'Error al registrar la asistencia'});
   }
 });
 
@@ -300,10 +299,10 @@ app.post('/insertaEncuesta', async(req, res) => {
     request.input('Fecha', mssql.Date, fecha);
     const result = await request.execute('PROC_IEncuesta');
     
-    return res.status(200).send('Encuesta agregada');
+    return res.status(200).json({message: 'Encuesta registrada'});
     
   } catch (err) {
-    return res.status(500).send('Error al insertar la encuesta');
+    return res.status(500).json({message: 'Error al registrar la encuesta'});
   }
 });
 
@@ -415,10 +414,10 @@ app.put('/actualizaEstadoCom', async (req, res) => {
     request.input('NombreEstadoC', mssql.VarChar(30), estadoCom);
     const result = await request.execute('PROC_AEstadoComedor');
     
-    return res.status(200).send('Estado del comedor actualizado');
+    return res.status(200).json({message: 'Estado del comedor actualizado'});
     
   } catch (err) {
-    return res.status(500).send('Error al actualizar el estado');
+    return res.status(500).json({message: 'Error al actualizar el estado'});
   }
 });
 
@@ -707,7 +706,7 @@ app.get('/condicionComensal', async(req, res) => {
     return res.status(200).send({table});
     
   } catch (err) {
-    return res.status(400).send('Error en la conexión a la BD');
+    return res.status(400).json({message: 'Error en la conexión a la BD'});
   }
 });
 
@@ -730,7 +729,7 @@ app.get('/dashBoard/:nombreCom/:fecha', async (req, res) => {
     return res.status(200).send({table});
     
   } catch (err) {
-    return res.status(400).send('Error en la conexón a la BD');
+    return res.status(400).json({message: 'Error en la conexón a la BD'});
   }
 });
 
@@ -750,7 +749,7 @@ app.get('/dashBoardComp/:fecha', async (req, res) => {
     return res.status(200).send({table});
     
   } catch (err) {
-    return res.status(400).send('Error en la conexón a la BD');
+    return res.status(400).json({message: 'Error en la conexón a la BD'});
   }
 });
 
@@ -773,7 +772,7 @@ app.get('/verMenu/:nombreCom/:fecha', async (req, res) => {
     return res.status(200).send({table});
     
   } catch (err) {
-    return res.status(400).send('Error en la conexón a la BD');
+    return res.status(400).json({message: 'Error en la conexón a la BD'});
   }
 });
 
@@ -795,7 +794,7 @@ app.get('/reporteIncidenciaCom/:nombreCom/:fecha', async (req, res) => {
     return res.status(200).send({table});
     
   } catch (err) {
-    return res.status(400).send('Error en la conexón a la BD');
+    return res.status(400).json({message: 'Error en la conexón a la BD'});
   }
 });
 
@@ -812,7 +811,7 @@ app.get('/correoAyuda', async(req, res) => {
     return res.status(200).send({table});
     
   } catch (err) {
-    return res.status(400).send('Error en la conexión a la BD');
+    return res.status(400).json({message: 'Error en la conexión a la BD'});
   }
 });
 
@@ -829,7 +828,7 @@ app.get('/nombreComedores', async(req, res) => {
     return res.status(200).send({table});
     
   } catch (err) {
-    return res.status(400).send('Error en la conexión a la BD');
+    return res.status(400).json({message: 'Error en la conexión a la BD'});
   }
 });
 
@@ -846,7 +845,7 @@ app.get('/preguntas', async(req, res) => {
     return res.status(200).send({table});
     
   } catch (err) {
-    return res.status(400).send('Error en la conexión a la BD');
+    return res.status(400).json({message: 'Error en la conexión a la BD'});
   }
 });
 
@@ -866,7 +865,7 @@ app.get('/estadoCom/:nombreCom', async (req, res) => {
     return res.status(200).send({table});
     
   } catch (err) {
-    return res.status(400).send('Error en la conexón a la BD');
+    return res.status(400).json({message: 'Error en la conexón a la BD'});
   }
 });
 
