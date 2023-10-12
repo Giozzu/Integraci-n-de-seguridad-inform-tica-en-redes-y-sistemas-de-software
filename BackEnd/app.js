@@ -160,7 +160,7 @@ app.post('/loginEncargado', async(req, res) => {
     request.input('Contraseña', mssql.VarChar(96), contra);
     request.output('Exito', mssql.Bit());
     const result = await request.execute('PROC_LoginEmpE');
-    const table = result.recordsets;
+    const table = result.recordset;
     
     if(result.output.Exito == true) {
       return res.status(201).send({table});
