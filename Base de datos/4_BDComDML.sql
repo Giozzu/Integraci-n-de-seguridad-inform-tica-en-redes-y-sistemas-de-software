@@ -241,7 +241,3 @@ GO
 
 
 -- IDComedor, IDComensal, IDTipoRacion, Raciones, Fecha
-
-
-SELECT * FROM Comensal
-SELECT * FROM Comedor
