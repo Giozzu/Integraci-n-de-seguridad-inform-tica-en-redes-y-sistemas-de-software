@@ -49,7 +49,8 @@ INSERT INTO Empleado VALUES (1, 'Ángel', 'Márquez', 'Curiel', 1989, 1, 'angeli
 INSERT INTO Empleado VALUES (1, 'José Ricardo', 'Moreno', 'Tahuilan', 1988, 1, 'pepe.moreno@comedoresdif.com', 'MorenoJose', 'ComedorCG');
 INSERT INTO Empleado VALUES (1, 'Martín', 'Díaz', 'Suárez', 1983, 1, 'martin.suarez@comedoresdif.com', 'MartinDiaz', 'APassword12');
 
-INSERT INTO Empleado VALUES (2, 'Juan Carlos', 'Carro', 'Cruz', 1989, 1, 'carro.cruz@comedoresdif.com', 'CarroJuan', 'Password123');
+--INSERT INTO Empleado VALUES (2, 'Juan Carlos', 'Carro', 'Cruz', 1989, 1, 'carro.cruz@comedoresdif.com', 'CarroJuan', 'Password123');
+INSERT INTO Empleado VALUES (2, 'Juan Carlos', 'Carro', 'Cruz', 1989, 1, 'carro.cruz@comedoresdif.com', 'A', '123');
 INSERT INTO Empleado VALUES (2, 'Maria', 'Espinoza', 'Navarro', 1981, 2, 'espinoza.navarro@comedoresdif.com', 'EspinozaMaria', '1234567890');
 INSERT INTO Empleado VALUES (2, 'Laura', 'Fernandez', 'Chavez', 1991, 2, 'lfrnandez.chvz@comedoresdif.com', 'FernandezLaura', 'ComedorQI');
 INSERT INTO Empleado VALUES (2, 'Armando', 'Torres', 'Índigo', 1985, 1, 'torres.indigo@comedoresdif.com', 'TorresArmando', 'ComedorCR');
@@ -58,10 +59,10 @@ INSERT INTO Empleado VALUES (2, 'Emmanuel', 'Velasco', 'Vega', 1995, 1, 'velasco
 GO
 
 -- Comedores
-INSERT INTO Comedor VALUES (7, 1, 'Cristo del Rodeo', 55, 'DireccionGenericaCR', '5561859871');
-INSERT INTO Comedor VALUES (8, 1, 'Santiago Tlatelolco', 65, 'DireccionGenericaST', '556841203971');
-INSERT INTO Comedor VALUES (9, 1, 'Cinco de Mayo', 85, 'DireccionGenericaCM', '555463178025');
-INSERT INTO Comedor VALUES (10, 1, 'Monte María', 55, 'DireccionGenericaMM', '5568144872123');
+INSERT INTO Comedor VALUES (7, 2, 'Cristo del Rodeo', 55, 'DireccionGenericaCR', '5561859871');
+INSERT INTO Comedor VALUES (8, 2, 'Santiago Tlatelolco', 65, 'DireccionGenericaST', '556841203971');
+INSERT INTO Comedor VALUES (9, 2, 'Cinco de Mayo', 85, 'DireccionGenericaCM', '555463178025');
+INSERT INTO Comedor VALUES (10, 2, 'Monte María', 55, 'DireccionGenericaMM', '5568144872123');
 GO
 /*
 -- Empleados
