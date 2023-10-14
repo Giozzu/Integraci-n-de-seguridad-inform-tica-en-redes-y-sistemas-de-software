@@ -18,7 +18,7 @@ Probando los APIs....
     "nombre": "Fernando",
     "apellidoP": "Carrillo",
     "apellidoM": "Mateos",
-    "fechaNacm": 1989,
+    "fechaNacim": 1989,
     "sexo": "Hombre",
     "correo": "carr.fernando@comedoresdif.com",
     "nombreUsuario": "FerCarrillo",
@@ -38,7 +38,7 @@ Probando los APIs....
     "nombre": "Sofía",
     "apellidoP": "Vidal",
     "apellidoM": "Suárez",
-    "fechaNacm": 1990,
+    "fechaNacim": 1990,
     "sexo": "Mujer",
     "correo": "suarez.vidal@comedoresdif.com",
     "nombreUsuario": "VidalSofia",
@@ -93,7 +93,7 @@ Probando los APIs....
     "apellidoP": "Lozano",
     "apellidoM": "Durán",
     "curp": "OMLD3454699LKJHSC3",
-    "fechaNacm": 1995,
+    "fechaNacim": 1995,
     "sexo": "Hombre",
     "nombreCond": ["Enfermedad Crónica", "Ciego", "Sordo"]
 }
@@ -142,7 +142,7 @@ Probando los APIs....
     "nombre": "Juan Pedro",
     "apellidoP": "Carro",
     "apellidoM": "Cruz",
-    "fechaNacm": 1990,
+    "fechaNacim": 1990,
     "sexo": "Hombre",
     "correo": "carro.cruz@comedoresdif.com",
     "nombreUsuario": "PedroCarro"
@@ -228,7 +228,7 @@ Probando los APIs....
 
 /dashBoard/Cerro Grande/2023-09-17
 
-/dashBoardComp/2023-09-17
+/dashBoardComp/México 86/2023-09-17
 
 
 **----------- |GERRY| -----------**
