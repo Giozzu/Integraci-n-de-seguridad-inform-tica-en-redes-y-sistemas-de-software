@@ -501,18 +501,48 @@ GO
 
 --Board para competición sana entre comedores
 CREATE OR ALTER PROCEDURE PROC_CDashBoardComp
-@Fecha AS DATE
+@NombreComedor AS VARCHAR(30), @Fecha AS DATE
 AS
 BEGIN
-	SELECT Nombre,
-		SUM(CASE WHEN IDTipoRacion = 1 THEN 1 ELSE 0 END) AS R_Pagadas,
-		SUM(CASE WHEN IDTipoRacion = 2 THEN 1 ELSE 0 END) AS R_Donadas,
-		COUNT(IDAsistencia) AS TotalVisitas,
-		SUM(CASE WHEN IDTipoRacion = 1 THEN 13 ELSE 0 END) AS MontoRecaudado
-	FROM Asistencia
-	JOIN Comedor ON Asistencia.IDComedor = Comedor.IDComedor
-	WHERE Fecha LIKE @Fecha
-	GROUP BY Nombre
+    -- Declarar una tabla variable para almacenar los resultados clasificados
+    DECLARE @TopResults TABLE (
+        Nombre NVARCHAR(255),
+        R_Pagadas INT,
+        R_Donadas INT,
+        TotalVisitas INT,
+        MontoRecaudado INT
+    )
+
+    INSERT INTO @TopResults
+    SELECT TOP 4 Nombre,
+        SUM(CASE WHEN IDTipoRacion = 1 THEN 1 ELSE 0 END) AS R_Pagadas,
+        SUM(CASE WHEN IDTipoRacion = 2 THEN 1 ELSE 0 END) AS R_Donadas,
+        COUNT(IDAsistencia) AS TotalVisitas,
+        SUM(CASE WHEN IDTipoRacion = 1 THEN 13 ELSE 0 END) AS MontoRecaudado
+    FROM Asistencia
+    JOIN Comedor ON Asistencia.IDComedor = Comedor.IDComedor
+    WHERE Fecha = @Fecha
+    GROUP BY Nombre
+    ORDER BY TotalVisitas DESC;  -- Ordenar por TotalVisitas en orden descendente
+
+    -- Si se especifica un comedor, se inserta en la tabla variable
+    IF @NombreComedor IS NOT NULL
+    BEGIN
+        INSERT INTO @TopResults
+        SELECT Nombre,
+            SUM(CASE WHEN IDTipoRacion = 1 THEN 1 ELSE 0 END) AS R_Pagadas,
+            SUM(CASE WHEN IDTipoRacion = 2 THEN 1 ELSE 0 END) AS R_Donadas,
+            COUNT(IDAsistencia) AS TotalVisitas,
+            SUM(CASE WHEN IDTipoRacion = 1 THEN 13 ELSE 0 END) AS MontoRecaudado
+        FROM Asistencia
+        JOIN Comedor ON Asistencia.IDComedor = Comedor.IDComedor
+        WHERE Fecha = @Fecha AND Nombre = @NombreComedor
+        GROUP BY Nombre;
+    END
+
+    -- Seleccionar los resultados de la tabla variable
+    SELECT *
+    FROM @TopResults;
 END;
 GO
 
