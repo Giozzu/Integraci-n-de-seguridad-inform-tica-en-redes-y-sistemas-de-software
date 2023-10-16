@@ -49,7 +49,7 @@ function generateRandomNumber(length) {
 // Insertar un Empleado (Supervisor)
 app.post('/insertaSupervisor', async(req, res) => {
   try {
-    const {nombre, apellidoP, apellidoM, fechaNacm, sexo, correo, nombreUsuario, contra} = req.body;
+    const {nombre, apellidoP, apellidoM, fechaNacim, sexo, correo, nombreUsuario, contra} = req.body;
     
     const pool = await mssql.connect(dbConfig);
     
@@ -57,7 +57,7 @@ app.post('/insertaSupervisor', async(req, res) => {
     request.input('Nombre', mssql.VarChar(30), nombre);
     request.input('ApellidoP', mssql.VarChar(30), apellidoP);
     request.input('ApellidoM', mssql.VarChar(30), apellidoM);
-    request.input('FechaNacim', mssql.Int(), fechaNacm);
+    request.input('FechaNacim', mssql.Int(), fechaNacim);
     request.input('DescSexo', mssql.VarChar(30), sexo);
     request.input('Correo', mssql.VarChar(40), correo);
     request.input('NombreUsuario', mssql.VarChar(40), nombreUsuario);
@@ -100,7 +100,7 @@ app.post('/loginSupervisor', async(req, res) => {
 // Insertar un Empleado (Encargado)
 app.post('/insertaEncargado', async(req, res) => {
   try {
-    const {nombre, apellidoP, apellidoM, fechaNacm, sexo, correo, nombreUsuario, contra} = req.body;
+    const {nombre, apellidoP, apellidoM, fechaNacim, sexo, correo, nombreUsuario, contra} = req.body;
     
     const pool = await mssql.connect(dbConfig);
     
@@ -108,7 +108,7 @@ app.post('/insertaEncargado', async(req, res) => {
     request.input('Nombre', mssql.VarChar(30), nombre);
     request.input('ApellidoP', mssql.VarChar(30), apellidoP);
     request.input('ApellidoM', mssql.VarChar(30), apellidoM);
-    request.input('FechaNacim', mssql.Int(), fechaNacm);
+    request.input('FechaNacim', mssql.Int(), fechaNacim);
     request.input('DescSexo', mssql.VarChar(30), sexo);
     request.input('Correo', mssql.VarChar(40), correo);
     request.input('NombreUsuario', mssql.VarChar(40), nombreUsuario);
@@ -224,7 +224,7 @@ app.post('/insertaIncidencia', async(req, res) => {
 // Insertar a un Comensal son sus Condiciones
 app.post('/insertaComensalCond', async(req, res) => {
   try {
-    const {nombre, apellidoP, apellidoM, curp, fechaNacm, sexo, nombreCond} = req.body;
+    const {nombre, apellidoP, apellidoM, curp, fechaNacim, sexo, nombreCond} = req.body;
 
     const pool = await mssql.connect(dbConfig);
 
@@ -233,7 +233,7 @@ app.post('/insertaComensalCond', async(req, res) => {
     request1.input('ApellidoP', mssql.VarChar(30), apellidoP);
     request1.input('ApellidoM', mssql.VarChar(30), apellidoM);
     request1.input('CURP', mssql.VarChar(18), curp);
-    request1.input('FechaNacim', mssql.Int, fechaNacm);
+    request1.input('FechaNacim', mssql.Int, fechaNacim);
     request1.input('DescSexo', mssql.VarChar(30), sexo);
     const token = parseInt(generateRandomNumber(5));
     request1.input('Token', mssql.Int, token);
@@ -314,7 +314,7 @@ app.post('/insertaEncuesta', async(req, res) => {
 // Actualizar un Empleado
 app.put('/actualizaEmpleado', async (req, res) => {
   try {
-    const {idEmp, nombre, apellidoP, apellidoM, fechaNacm, sexo, correo, nombreUsuario} = req.body;
+    const {idEmp, nombre, apellidoP, apellidoM, fechaNacim, sexo, correo, nombreUsuario} = req.body;
     
     const pool = await mssql.connect(dbConfig);
     
@@ -323,7 +323,7 @@ app.put('/actualizaEmpleado', async (req, res) => {
     request.input('Nombre', mssql.VarChar(30), nombre);
     request.input('ApellidoP', mssql.VarChar(30), apellidoP);
     request.input('ApellidoM', mssql.VarChar(30), apellidoM);
-    request.input('FechaNacim', mssql.Int(), fechaNacm);
+    request.input('FechaNacim', mssql.Int(), fechaNacim);
     request.input('DescSexo', mssql.VarChar(30), sexo);
     request.input('Correo', mssql.VarChar(40), correo);
     request.input('NombreUsuario', mssql.VarChar(40), nombreUsuario);
