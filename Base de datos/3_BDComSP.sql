@@ -559,7 +559,7 @@ BEGIN
 
 	SELECT SopaArroz, PlatoFuerte, PanTortilla, AguaDelDia, FrijolesSalsa
 	FROM Menu
-	WHERE (IDComedor = @ComedorBusq) AND (Fecha LIKE @Fecha) AND (IDMenu = IDENT_CURRENT('Menu'))
+	WHERE (IDComedor = @ComedorBusq) AND (Fecha LIKE @Fecha)
 END;
 GO
 
