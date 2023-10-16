@@ -735,13 +735,15 @@ app.get('/dashBoard/:nombreCom/:fecha', async (req, res) => {
 
 
 // Tabla sobre Competición sana entre Comedores
-app.get('/dashBoardComp/:fecha', async (req, res) => {
+app.get('/dashBoardComp/:nombreCom/:fecha', async (req, res) => {
   try {
+    const nombreCom = req.params.nombreCom;
     const fecha = req.params.fecha;
     
     const pool = await mssql.connect(dbConfig);
     
     const request = pool.request();
+    request.input('NombreComedor', mssql.VarChar(30), nombreCom)
     request.input('Fecha', mssql.Date, fecha)
     const result = await request.execute('PROC_CDashBoardComp');
     const table = result.recordset;
