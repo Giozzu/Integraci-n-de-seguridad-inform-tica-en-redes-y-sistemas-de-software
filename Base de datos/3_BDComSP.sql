@@ -279,12 +279,11 @@ AS
 BEGIN
 	SELECT
     CASE
-		WHEN YEAR(GETDATE()) - FechaNacim BETWEEN 0 AND 5 THEN 'Menor a 5 años'
-        WHEN YEAR(GETDATE()) - FechaNacim BETWEEN 6 AND 25 THEN '6-25 años'
-        WHEN YEAR(GETDATE()) - FechaNacim BETWEEN 26 AND 35 THEN '26-35 años'
-        WHEN YEAR(GETDATE()) - FechaNacim BETWEEN 36 AND 45 THEN '36-45 años'
-        WHEN YEAR(GETDATE()) - FechaNacim BETWEEN 46 AND 64 THEN '46-64 años'
-        ELSE 'Más de 65 años'
+		WHEN YEAR(GETDATE()) - FechaNacim BETWEEN 0 AND 5 THEN 'Primera Infancia'
+        WHEN YEAR(GETDATE()) - FechaNacim BETWEEN 6 AND 11 THEN 'Infancia'
+        WHEN YEAR(GETDATE()) - FechaNacim BETWEEN 12 AND 17 THEN 'Adolescencia'
+        WHEN YEAR(GETDATE()) - FechaNacim BETWEEN 18 AND 59 THEN 'Adultos'
+        ELSE 'Personas Tercera Edad'
     END AS RangoEdades,
     COUNT(*) AS Cantidad
 	FROM Asistencia
@@ -292,12 +291,11 @@ BEGIN
 	WHERE (Fecha LIKE @Fecha) AND (FechaNacim IS NOT NULL)
 	GROUP BY
     CASE
-        WHEN YEAR(GETDATE()) - FechaNacim BETWEEN 0 AND 5 THEN 'Menor a 5 años'
-        WHEN YEAR(GETDATE()) - FechaNacim BETWEEN 6 AND 25 THEN '6-25 años'
-        WHEN YEAR(GETDATE()) - FechaNacim BETWEEN 26 AND 35 THEN '26-35 años'
-        WHEN YEAR(GETDATE()) - FechaNacim BETWEEN 36 AND 45 THEN '36-45 años'
-        WHEN YEAR(GETDATE()) - FechaNacim BETWEEN 46 AND 64 THEN '46-64 años'
-        ELSE 'Más de 65 años'
+        WHEN YEAR(GETDATE()) - FechaNacim BETWEEN 0 AND 5 THEN 'Primera Infancia'
+        WHEN YEAR(GETDATE()) - FechaNacim BETWEEN 6 AND 11 THEN 'Infancia'
+        WHEN YEAR(GETDATE()) - FechaNacim BETWEEN 12 AND 17 THEN 'Adolescencia'
+        WHEN YEAR(GETDATE()) - FechaNacim BETWEEN 18 AND 59 THEN 'Adultos'
+        ELSE 'Personas Tercera Edad'
     END
 ORDER BY RangoEdades;
 END;
