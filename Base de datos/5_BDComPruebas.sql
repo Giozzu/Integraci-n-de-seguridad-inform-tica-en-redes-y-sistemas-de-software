@@ -12,11 +12,14 @@ GO
 EXECUTE PROC_IEmpleadoE 'Sofía', 'Vidal', 'Suárez',  1990, 'Mujer', 'suarez.vidal@comedoresdif.com', 'VidalSofia', 'MyPassword';
 GO
 
-EXECUTE PROC_IComedor 'lozano.arias@comedoresdif.com', 'Abierto', 'Lago de Guadalupe', 69, 'DireccionGenericaLG', '55456789081';
+EXECUTE PROC_IComedor 'suarez.vidal@comedoresdif.com', 'Abierto', 'Lago de Guadalupe', 69, 'DireccionGenericaLG', '55456789081';
 GO
 
 -- APP VOL/ENC --
-EXECUTE PROC_IMenu 'Lago de Guadalupe', 'Sopa de Tortilla', 'Milanesas', 'Pan salado', 'Agua de Limón', 'Frijoles', '2023-09-17';
+EXECUTE PROC_AMenu '5 de Mayo', 'SopE', 'MilanesasEEE', 'Pan EEE', 'EE de Limón', 'EE', '2023-09-18';
+GO
+
+EXECUTE PROC_CVerMenu '5 de Mayo', '2023-09-18';
 GO
 
 EXECUTE PROC_IIncidencias 'Lago de Guadalupe', 'Fuga de gas', 'La cocina tuvó una fuga de gas', '2023-09-21';
@@ -33,9 +36,9 @@ EXECUTE PROC_IAsistenciaT 'Lago de Guadalupe', 'Donada', 1, '2023-09-17', 1110;
 GO
 
 -- APP COM --
-EXECUTE PROC_IEncuesta 'Lago de Guadalupe', 'Califica la comida (0-10)', 'Una comida bien servida', 8, '2023-10-04'
-EXECUTE PROC_IEncuesta 'Lago de Guadalupe', 'Califica la limpieza (0-10)', 'Limpio, pero podía mejorar', 7, '2023-10-04'
-EXECUTE PROC_IEncuesta 'Lago de Guadalupe', 'Califica el servicio (0-10)', 'Muy bien servicio', 9, '2023-10-04'
+EXECUTE PROC_IEncuesta 'Lago de Guadalupe', 'Califica la limpieza del comedor', 'Una comida bien servida', 8, '2023-10-04'
+EXECUTE PROC_IEncuesta 'Lago de Guadalupe', 'Califica la calidad de la comida', 'Limpio, pero podía mejorar', 7, '2023-10-04'
+EXECUTE PROC_IEncuesta 'Lago de Guadalupe', 'Califica el servicio del comedor', 'Muy bien servicio', 9, '2023-10-04'
 GO
 
 

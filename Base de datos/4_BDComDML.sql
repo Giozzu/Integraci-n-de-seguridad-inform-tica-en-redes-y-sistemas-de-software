@@ -74,44 +74,44 @@ INSERT INTO Empleado VALUES (1, 'Ángel', 'Márquez', 'Curiel', 1989, 1, 'angeli
 INSERT INTO Empleado VALUES (1, 'José Ricardo', 'Moreno', 'Tahuilan', 1988, 1, 'pepe.moreno@comedoresdif.com', 'MorenoJose', 'ComedorCG');
 INSERT INTO Empleado VALUES (1, 'Martín', 'Díaz', 'Suárez', 1983, 1, 'martin.suarez@comedoresdif.com', 'MartinDiaz', 'APassword12');
 
---INSERT INTO Empleado VALUES (2, 'Felisa', 'López', 'Martínez', 1989, 2, '', 'LopezFelisa', 'pwd');
-INSERT INTO Empleado VALUES (2, 'Felisa', 'López', 'Martínez', 1989, 2, '', 'Lo', 'pwd');
-INSERT INTO Empleado VALUES (2, 'Abad ', 'Monroy ', 'Mendoza', 1981, 1, '', 'MonroyAbad', '1234567890');
-INSERT INTO Empleado VALUES (2, 'Eva María', 'Rodríguez ', 'Mosqueda', 1981, 2, '', 'RodrigzEva', 'Comedor');
-INSERT INTO Empleado VALUES (2, 'Silvia', 'Sanabria', 'Ortega', 1985, 2, '', 'SanabriaSilvia', 'ComedorMJ');
-INSERT INTO Empleado VALUES (2, 'David', 'Valdivia', 'Rodriguez', 1984, 1, '', 'ValdiviaDavid', 'It231');
-INSERT INTO Empleado VALUES (2, 'Lidia Valentina', 'Mendoza', 'Olivares', 1990, 2, '', 'MendozaLidia', 'CieweRa');
-INSERT INTO Empleado VALUES (2, 'Concepción', 'Martínez', 'Fernández', 1986, 2, '', 'MartinezConz', 'UnaContra');
-INSERT INTO Empleado VALUES (2, 'Tayde Martina', 'Pérez', 'Pérez', 1982, 2, '', 'PerezTayde', 'coPaordfv');
-INSERT INTO Empleado VALUES (2, 'Liliana', 'Velez', 'Suárez', 1989, 2, '', 'VelezLiliana', 'zxcvb');
-INSERT INTO Empleado VALUES (2, 'María del Carmen', 'Castro', 'García', 1984, 2, '', 'CastroMaria', 'qwerrty');
-INSERT INTO Empleado VALUES (2, 'Karla Aide', 'Rosas', 'Ponce', 1983, 2, '', 'RosasKarla', 'ghjkl');
-INSERT INTO Empleado VALUES (2, 'José Manuel', 'Peralta', 'Tiol', 1989, 1, '', 'PeraltaJose', 'plmokn');
-INSERT INTO Empleado VALUES (2, 'Luisa', 'Barrera', 'Barrera', 1983, 2, '', 'BarreraLuisa', 'jhgfdds');
-INSERT INTO Empleado VALUES (2, 'Asunción', 'Huertas', 'Vidal', 1986, 2, '', 'HuertasAsun', 'tyuio');
-INSERT INTO Empleado VALUES (2, 'Leslie Magdalena', 'López', 'Bustos', 1985, 2, '', 'LopezLeslie', 'yuiop');
-INSERT INTO Empleado VALUES (2, 'Cristina', 'Fernández', 'Parada', 1982, 2, '', 'FerndezCristi', 'xcvbn');
-INSERT INTO Empleado VALUES (2, 'Beatriz', 'Gómez', 'Martínez', 1986, 2, '', 'GomezBeatriz', 'asddfg');
-INSERT INTO Empleado VALUES (2, 'Maria Juana', 'Cano', 'Vargas', 1987, 2, '', 'CanoMaria', 'gbhnjm');
-INSERT INTO Empleado VALUES (2, 'Juana', 'Aguilar', 'Monroy', 1988, 2, '', 'AguilarJuana', 'mnbvcxz');
-INSERT INTO Empleado VALUES (2, 'Margarita Paula', 'Monterrosas', 'Sánchez', 1983, 2, '', 'MonterrosasMarg', 'rtyuiop');
-INSERT INTO Empleado VALUES (2, 'Rosa María', 'Piña', 'Tovar', 1985, 2, '', 'PiñaRosa', '1234ty');
-INSERT INTO Empleado VALUES (2, 'Griselda', 'Iglesias', 'González', 1985, 2, '', 'IglesiasGris', '8907uy');
-INSERT INTO Empleado VALUES (2, 'Giovanna', 'Padrón', 'Calvillo', 1981, 2, '', 'PadronGiovanna', 'sdf2345');
-INSERT INTO Empleado VALUES (2, 'María de los Angeles', 'Avila', 'Huerta', 1988, 2, '', 'AvilaAngeles', '98765tre');
-INSERT INTO Empleado VALUES (2, 'Laura', 'Patiño', 'Serratos', 1987, 2, '', 'PatiñoLaura', 'xcv456');
-INSERT INTO Empleado VALUES (2, 'Blanca Patricia', 'Martinez', 'Olayo', 1984, 2, '', 'MartinezBlanca', 'kjh876a');
-INSERT INTO Empleado VALUES (2, 'Raymundo', 'Villanueva', 'Santillán', 1985, 1, '', 'VillanuevaRay', '3456sklz');
-INSERT INTO Empleado VALUES (2, 'Yessica Iskra', 'Escalante', 'Barragán', 1981, 2, '', 'EscalanteYess', 'sdfg6789');
-INSERT INTO Empleado VALUES (2, 'Emilia Yasmin', 'Figueroa', 'Jose', 1980, 2, '', 'FigueroaEmilia', 'zxcv23456');
-INSERT INTO Empleado VALUES (2, 'Rosa Maria', 'Fierros', 'Comparan', 1989, 2, '', 'FierrosRosa', 'lmkn976w');
-INSERT INTO Empleado VALUES (2, 'Mariela', 'Pablo', 'Florentino', 1979, 2, '', 'PabloMariela', 'xcvbnm32');
-INSERT INTO Empleado VALUES (2, 'Claudia', '', 'Castillo', 1990, 2, '', 'CastilloClaudia', '5678vcxrtgh');
-INSERT INTO Empleado VALUES (2, 'Graciela', 'Ruiz', 'Vaca', 1986, 2, '', 'RuizGraciela', 'contraseñaskfj');
-INSERT INTO Empleado VALUES (2, 'Nancy', 'Rivera', 'Trejo', 1985, 2, '', 'RiveraNancy', 'cvbnm75645');
-INSERT INTO Empleado VALUES (2, 'Maria del Carmen', 'Ramírez', 'González', 1983, 2, '', 'RamirezMaria', 'oiu87654xcv');
-INSERT INTO Empleado VALUES (2, 'María Dolores', 'Sarabía', 'Mendoza', 1985, 2, '', 'SarabiaMaria', 'vbnmefghre45');
-INSERT INTO Empleado VALUES (2, 'Mónica', 'Juana', 'Cruz', 1982, 2, '', 'JuanaMonica', 'fg567687564g53f');
+--INSERT INTO Empleado VALUES (2, 'Felisa', 'López', 'Martínez', 1989, 2, 'lopez_Feli@comedoresdif.com', 'LopezFelisa', 'pwd');
+INSERT INTO Empleado VALUES (2, 'Felisa', 'López', 'Martínez', 1989, 2, 'LopezFeli@comedoresdif.com', 'Lo', 'pwd');
+INSERT INTO Empleado VALUES (2, 'Abad ', 'Monroy ', 'Mendoza', 1981, 1, 'MonroyAbad@comedoresdif.com', 'MonroyAbad', '1234567890');
+INSERT INTO Empleado VALUES (2, 'Eva María', 'Rodríguez ', 'Mosqueda', 1981, 2, 'RodrigEva@comedoresdif.com', 'RodrigzEva', 'Comedor');
+INSERT INTO Empleado VALUES (2, 'Silvia', 'Sanabria', 'Ortega', 1985, 2, 'SanabriaSilv@comedoresdif.com', 'SanabriaSilvia', 'ComedorMJ');
+INSERT INTO Empleado VALUES (2, 'David', 'Valdivia', 'Rodriguez', 1984, 1, 'ValdivDavid@comedoresdif.com', 'ValdiviaDavid', 'It231');
+INSERT INTO Empleado VALUES (2, 'Lidia Valentina', 'Mendoza', 'Olivares', 1990, 2, 'MendozaLidia@comedoresdif.com', 'MendozaLidia', 'CieweRa');
+INSERT INTO Empleado VALUES (2, 'Concepción', 'Martínez', 'Fernández', 1986, 2, 'MartnzConcep@comedoresdif.com', 'MartinezConz', 'UnaContra');
+INSERT INTO Empleado VALUES (2, 'Tayde Martina', 'Pérez', 'Pérez', 1982, 2, 'PerezTayde@comedoresdif.com', 'PerezTayde', 'coPaordfv');
+INSERT INTO Empleado VALUES (2, 'Liliana', 'Velez', 'Suárez', 1989, 2, 'VelezLiliana@comedoresdif.com', 'VelezLiliana', 'zxcvb');
+INSERT INTO Empleado VALUES (2, 'María del Carmen', 'Castro', 'García', 1984, 2, 'CastroMaria@comedoresdif.com', 'CastroMaria', 'qwerrty');
+INSERT INTO Empleado VALUES (2, 'Karla Aide', 'Rosas', 'Ponce', 1983, 2, 'RosasKarla@comedoresdif.com', 'RosasKarla', 'ghjkl');
+INSERT INTO Empleado VALUES (2, 'José Manuel', 'Peralta', 'Tiol', 1989, 1, 'PeraltaJose@comedoresdif.com', 'PeraltaJose', 'plmokn');
+INSERT INTO Empleado VALUES (2, 'Luisa', 'Barrera', 'Barrera', 1983, 2, 'BarreraLuisa@comedoresdif.com', 'BarreraLuisa', 'jhgfdds');
+INSERT INTO Empleado VALUES (2, 'Asunción', 'Huertas', 'Vidal', 1986, 2, 'HuertasAsunc@comedoresdif.com', 'HuertasAsun', 'tyuio');
+INSERT INTO Empleado VALUES (2, 'Leslie Magdalena', 'López', 'Bustos', 1985, 2, 'LopezLeslie@comedoresdif.com', 'LopezLeslie', 'yuiop');
+INSERT INTO Empleado VALUES (2, 'Cristina', 'Fernández', 'Parada', 1982, 2, 'FerndzCristi@comedoresdif.com', 'FerndezCristi', 'xcvbn');
+INSERT INTO Empleado VALUES (2, 'Beatriz', 'Gómez', 'Martínez', 1986, 2, 'GomezBeatriz@comedoresdif.com', 'GomezBeatriz', 'asddfg');
+INSERT INTO Empleado VALUES (2, 'Maria Juana', 'Cano', 'Vargas', 1987, 2, 'CanoMaria@comedoresdif.com', 'CanoMaria', 'gbhnjm');
+INSERT INTO Empleado VALUES (2, 'Juana', 'Aguilar', 'Monroy', 1988, 2, 'AguilarJuana@comedoresdif.com', 'AguilarJuana', 'mnbvcxz');
+INSERT INTO Empleado VALUES (2, 'Margarita Paula', 'Monterrosas', 'Sánchez', 1983, 2, 'MonterrosasMar@comedoresdif.com', 'MonterrosasMarg', 'rtyuiop');
+INSERT INTO Empleado VALUES (2, 'Rosa María', 'Piña', 'Tovar', 1985, 2, 'PiñaRosa@comedoresdif.com', 'PiñaRosa', '1234ty');
+INSERT INTO Empleado VALUES (2, 'Griselda', 'Iglesias', 'González', 1985, 2, 'IglesiasGris@comedoresdif.com', 'IglesiasGris', '8907uy');
+INSERT INTO Empleado VALUES (2, 'Giovanna', 'Padrón', 'Calvillo', 1981, 2, 'PadronGiovanna@comedoresdif.com', 'PadronGiovanna', 'sdf2345');
+INSERT INTO Empleado VALUES (2, 'María de los Angeles', 'Avila', 'Huerta', 1988, 2, 'AvilaMaria@comedoresdif.com', 'AvilaAngeles', '98765tre');
+INSERT INTO Empleado VALUES (2, 'Laura', 'Patiño', 'Serratos', 1987, 2, 'PatiñoLaura@comedoresdif.com', 'PatiñoLaura', 'xcv456');
+INSERT INTO Empleado VALUES (2, 'Blanca Patricia', 'Martinez', 'Olayo', 1984, 2, 'MartnzBlanca@comedoresdif.com', 'MartinezBlanca', 'kjh876a');
+INSERT INTO Empleado VALUES (2, 'Raymundo', 'Villanueva', 'Santillán', 1985, 1, 'VillanuevaRaymundo@comedoresdif.com', 'VillanuevaRay', '3456sklz');
+INSERT INTO Empleado VALUES (2, 'Yessica Iskra', 'Escalante', 'Barragán', 1981, 2, 'EscalanteYessica@comedoresdif.com', 'EscalanteYess', 'sdfg6789');
+INSERT INTO Empleado VALUES (2, 'Emilia Yasmin', 'Figueroa', 'Jose', 1980, 2, 'FigueroaEmilia@comedoresdif.com', 'FigueroaEmilia', 'zxcv23456');
+INSERT INTO Empleado VALUES (2, 'Rosa Maria', 'Fierros', 'Comparan', 1989, 2, 'FierrosRosa@comedoresdif.coRosam', 'FierrosRosa', 'lmkn976w');
+INSERT INTO Empleado VALUES (2, 'Mariela', 'Pablo', 'Florentino', 1979, 2, '@comedoresdif.com', 'PabloMariela', 'xcvbnm32');
+INSERT INTO Empleado VALUES (2, 'Claudia', '@comedoresdif.com', 'Castillo', 1990, 2, 'CastilloClaudia@comedoresdif.com', 'CastilloClaudia', '5678vcxrtgh');
+INSERT INTO Empleado VALUES (2, 'Graciela', 'Ruiz', 'Vaca', 1986, 2, 'RuizGraciela@comedoresdif.com', 'RuizGraciela', 'contraseñaskfj');
+INSERT INTO Empleado VALUES (2, 'Nancy', 'Rivera', 'Trejo', 1985, 2, 'RiveraNancy@comedoresdif.com', 'RiveraNancy', 'cvbnm75645');
+INSERT INTO Empleado VALUES (2, 'Maria del Carmen', 'Ramírez', 'González', 1983, 2, 'RamirezMaria@comedoresdif.com', 'RamirezMaria', 'oiu87654xcv');
+INSERT INTO Empleado VALUES (2, 'María Dolores', 'Sarabía', 'Mendoza', 1985, 2, 'SarabiaMaria@comedoresdif.com', 'SarabiaMaria', 'vbnmefghre45');
+INSERT INTO Empleado VALUES (2, 'Mónica', 'Juana', 'Cruz', 1982, 2, 'JuanaMonica@comedoresdif.com', 'JuanaMonica', 'fg567687564g53f');
 GO
 
 -- Comedores
@@ -157,6 +157,45 @@ GO
 --*/
 
 -- Menú
+INSERT INTO Menu VALUES (1, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (2, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (3, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (4, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (5, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (6, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (7, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (8, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (9, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (10, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (11, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (12, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (13, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (14, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (15, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (16, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (17, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (18, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (19, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (20, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (21, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (22, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (23, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (24, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (25, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (26, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (27, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (28, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (29, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (30, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (31, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (32, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (33, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (34, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (35, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (36, '', '', '', '', '', 13.00, '');
+INSERT INTO Menu VALUES (37, '', '', '', '', '', 13.00, '');
+
+/*
 INSERT INTO Menu VALUES (1, 'Sopa de caracol', 'Enchiladas', 'Tortillas', 'Agua de Limón', 'Chiles en vinagre', 13.00, '2023-09-12');
 INSERT INTO Menu VALUES (1, 'Arroz rojo', 'Nopales con Cilantro', 'Tortillas', 'Agua simple', 'Fijoles', 13.00, '2023-09-13');
 INSERT INTO Menu VALUES (2, 'Arroz blanco', 'Torta de papa', 'Pan bolillo', 'Agua de Jamaica', 'Salsa roja',  13.00, '2023-09-12');
@@ -166,6 +205,7 @@ INSERT INTO Menu VALUES (3, 'Arroz blanco', 'Chicharron en salsa', 'Pan bolillo'
 INSERT INTO Menu VALUES (4, 'Sopa de pollo', 'Arrachera', 'Tortillas', 'Agua de sandía', 'Frijoles', 13.00, '2023-09-12');
 INSERT INTO Menu VALUES (4, 'Arroz rojo', 'Albondigas', 'Tortillas', 'Agua simple', 'Chiles en vinagre', 13.00, '2023-09-13');
 GO
+*/
 
 -- Incidencias
 INSERT INTO Incidencia VALUES (1, 'Apertura tardía', 'Encargado de llaves tuvo un problema', '2023-09-20');

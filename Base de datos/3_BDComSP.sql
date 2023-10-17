@@ -55,7 +55,7 @@ GO
 
 -- APP VOL/ENC --
 --Menú
-CREATE OR ALTER PROCEDURE PROC_IMenu
+CREATE OR ALTER PROCEDURE PROC_AMenu
 @NombreComedor AS VARCHAR(30), @SopaArroz AS VARCHAR(50), @PlatoFuerte AS VARCHAR(50),
 @PanTortilla AS VARCHAR(50), @AguaDelDia AS VARCHAR(30), @FrijolesSalsa AS VARCHAR(50),
 @Fecha AS DATE
@@ -65,8 +65,12 @@ BEGIN
 
 	SELECT @ComedorBusq = (SELECT IDComedor FROM Comedor WHERE Nombre LIKE @NombreComedor) 
 	
-	INSERT INTO Menu 
-	VALUES (@ComedorBusq, @SopaArroz, @PlatoFuerte, @PanTortilla, @AguaDelDia, @FrijolesSalsa, 13.00, @Fecha)
+	UPDATE Menu
+	SET SopaArroz = @SopaArroz, PlatoFuerte = @PlatoFuerte, 
+	PanTortilla = @PanTortilla, AguaDelDia = @AguaDelDia, 
+	FrijolesSalsa = @FrijolesSalsa, Precio = 13.00, 
+	Fecha = @Fecha
+	WHERE IDComedor = @ComedorBusq
 END;
 GO
 
