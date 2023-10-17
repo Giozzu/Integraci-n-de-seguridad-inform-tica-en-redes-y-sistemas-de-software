@@ -36,9 +36,9 @@ INSERT INTO Rol VALUES ('Encargado');
 GO
 
 -- Catálogo para las preguntas
-INSERT INTO Pregunta VALUES ('Califica la comida (0-10)');
-INSERT INTO Pregunta VALUES ('Califica la limpieza (0-10)');
-INSERT INTO Pregunta VALUES ('Califica el servicio (0-10)');
+INSERT INTO Pregunta VALUES ('Califica la limpieza del comedor');
+INSERT INTO Pregunta VALUES ('Califica la calidad de la comida');
+INSERT INTO Pregunta VALUES ('Califica el servicio del comedor');
 GO
 
 /*
