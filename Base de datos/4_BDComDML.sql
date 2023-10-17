@@ -27,6 +27,7 @@ INSERT INTO Condicion VALUES ('Embarazada');
 INSERT INTO Condicion VALUES ('Persona Sorda');
 INSERT INTO Condicion VALUES ('Persona Ciega');
 INSERT INTO Condicion VALUES ('Enfermedad Crónica');
+INSERT INTO Condicion VALUES ('Discapscidad Física');
 --INSERT INTO Condicion VALUES ('Malnutrición')
 GO
 
@@ -208,7 +209,7 @@ GO
 */
 
 -- Incidencias
-INSERT INTO Incidencia VALUES (1, 'Apertura tardía', 'Encargado de llaves tuvo un problema', '2023-09-20');
+INSERT INTO Incidencia VALUES (1, 'Apertura tardía', 'Encargado de llaves tuvo un problema', '2023-10-17');
 GO
 
 -- Encuesta
@@ -250,33 +251,33 @@ GO
 
 -- Asistencia
 
-INSERT INTO Asistencia VALUES (1, 1, 2, 1, '2023-09-17');
-INSERT INTO Asistencia VALUES (1, 2, 1, 1, '2023-09-17');
-INSERT INTO Asistencia VALUES (1, 3, 2, 1, '2023-09-19');
-INSERT INTO Asistencia VALUES (1, 10, 1, 1, '2023-09-17');
-INSERT INTO Asistencia VALUES (2, 4, 1, 1, '2023-09-16');
-INSERT INTO Asistencia VALUES (2, 7, 2, 1, '2023-09-17');
-INSERT INTO Asistencia VALUES (2, 4, 1, 1, '2023-09-17');
-INSERT INTO Asistencia VALUES (2, 5, 1, 1, '2023-09-17');
-INSERT INTO Asistencia VALUES (2, 5, 2, 1, '2023-09-20');
-INSERT INTO Asistencia VALUES (3, 6, 1, 1, '2023-09-17');
-INSERT INTO Asistencia VALUES (3, 7, 1, 1, '2023-09-18');
-INSERT INTO Asistencia VALUES (3, 6, 2, 1, '2023-09-18');
-INSERT INTO Asistencia VALUES (4, 11, 1, 1, '2023-09-17');
-INSERT INTO Asistencia VALUES (4, 8, 1, 1, '2023-09-17');
-INSERT INTO Asistencia VALUES (4, 9, 1, 1, '2023-09-17');
-INSERT INTO Asistencia VALUES (4, 9, 2, 1, '2023-09-21');
+INSERT INTO Asistencia VALUES (1, 1, 2, 1, '2023-10-17');
+INSERT INTO Asistencia VALUES (1, 2, 1, 1, '2023-10-17');
+INSERT INTO Asistencia VALUES (1, 3, 2, 1, '2023-10-17');
+INSERT INTO Asistencia VALUES (1, 10, 1, 1, '2023-10-17');
+INSERT INTO Asistencia VALUES (2, 4, 1, 1, '2023-10-17');
+INSERT INTO Asistencia VALUES (2, 7, 2, 1, '2023-10-17');
+INSERT INTO Asistencia VALUES (2, 4, 1, 1, '2023-10-17');
+INSERT INTO Asistencia VALUES (2, 5, 1, 1, '2023-10-17');
+INSERT INTO Asistencia VALUES (2, 5, 2, 1, '2023-10-17');
+INSERT INTO Asistencia VALUES (3, 6, 1, 1, '2023-10-17');
+INSERT INTO Asistencia VALUES (3, 7, 1, 1, '2023-10-17');
+INSERT INTO Asistencia VALUES (3, 6, 2, 1, '2023-10-17');
+INSERT INTO Asistencia VALUES (4, 11, 1, 1, '2023-10-17');
+INSERT INTO Asistencia VALUES (4, 8, 1, 1, '2023-10-17');
+INSERT INTO Asistencia VALUES (4, 9, 1, 1, '2023-10-17');
+INSERT INTO Asistencia VALUES (4, 9, 2, 1, '2023-10-17');
 
-INSERT INTO Asistencia VALUES (5, 10, 1, 1, '2023-09-17');
-INSERT INTO Asistencia VALUES (5, 11, 1, 1, '2023-09-17');
-INSERT INTO Asistencia VALUES (5, 2, 1, 1, '2023-09-17');
-INSERT INTO Asistencia VALUES (5, 1, 2, 1, '2023-09-17');
-INSERT INTO Asistencia VALUES (5, 3, 2, 1, '2023-09-17');
-INSERT INTO Asistencia VALUES (5, 4, 1, 1, '2023-09-17');
+INSERT INTO Asistencia VALUES (5, 10, 1, 1, '2023-10-17');
+INSERT INTO Asistencia VALUES (5, 11, 1, 1, '2023-10-17');
+INSERT INTO Asistencia VALUES (5, 2, 1, 1, '2023-10-17');
+INSERT INTO Asistencia VALUES (5, 1, 2, 1, '2023-10-17');
+INSERT INTO Asistencia VALUES (5, 3, 2, 1, '2023-10-17');
+INSERT INTO Asistencia VALUES (5, 4, 1, 1, '2023-10-17');
 
-INSERT INTO Asistencia VALUES (6, 6, 1, 1, '2023-09-17');
-INSERT INTO Asistencia VALUES (6, 7, 1, 1, '2023-09-17');
-INSERT INTO Asistencia VALUES (6, 8, 1, 1, '2023-09-17');
+INSERT INTO Asistencia VALUES (6, 6, 1, 1, '2023-10-17');
+INSERT INTO Asistencia VALUES (6, 7, 1, 1, '2023-10-17');
+INSERT INTO Asistencia VALUES (6, 8, 1, 1, '2023-10-17');
 GO
 
 
