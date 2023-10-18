@@ -488,7 +488,7 @@ BEGIN
 
     -- Dinero Recaudado
     INSERT INTO #Resultados (Valor)
-    SELECT SUM(Raciones) * 13
+    SELECT ISNULL(SUM(Raciones) * 13, 0)
     FROM Asistencia
     WHERE (IDComedor = @ComedorBusq) AND (IDTipoRacion = 1) AND (Fecha = @Fecha);
 
