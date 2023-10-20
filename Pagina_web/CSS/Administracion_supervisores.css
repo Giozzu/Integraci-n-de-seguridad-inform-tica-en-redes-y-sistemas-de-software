@@ -1,0 +1,253 @@
+body{
+    margin: 0;
+    padding: 0;
+    outline:none;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+
+  
+/********************
+ Título de la página
+*********************/
+
+.shapes{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background:#6B4996ff;
+    overflow: hidden;
+}
+  
+.shape{
+    will-change: transform;
+    position: absolute;
+    border-radius: 50%;
+}
+
+
+.shape.shape-1{
+    background: linear-gradient(
+        135deg, #6B4996ff, rgb(64, 137, 255), rgb(64, 137, 255), rgb(138, 48, 255), rgb(255, 56, 102), rgb(64, 137, 255), rgb(64, 137, 255), rgb(138, 48, 255));;
+    width: 650px;
+    height: 650px;
+    margin: -325px 0 0 -325px;
+}
+
+.shape.shape-2{
+    background:linear-gradient(
+        135deg, #6B4996ff, rgb(64, 137, 255), rgb(64, 137, 255), rgb(138, 48, 255), rgb(255, 56, 102), rgb(64, 137, 255), rgb(64, 137, 255), rgb(138, 48, 255));;
+    width: 440px;
+    height: 440px;
+    margin: -220px 0 0 -220px;
+}
+
+.shape.shape-3 {
+    background: linear-gradient(
+        135deg, rgb(255, 56, 102), rgb(64, 137, 255), rgb(64, 137, 255), rgb(138, 48, 255), rgb(255, 56, 102), rgb(64, 137, 255), rgb(64, 137, 255), rgb(138, 48, 255));
+    width: 270px;
+    height: 270px;
+    margin: -135px 0 0 -135px;
+}
+  
+.titulo{
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: #fff;
+    mix-blend-mode: screen;
+}
+  
+h1{
+    font-size: 100px;
+    color: #000;
+    margin: 0;
+    text-align: center;
+}
+  
+.cursor{
+    position: fixed;
+    background: rgb(195, 255, 56);
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border-radius: 50%;
+    will-change: transform;
+    user-select: none;
+    pointer-events: none;
+    z-index: 10000;
+  }
+  
+::selection{
+    color: #fff;
+    background: #2128bd;
+}
+
+
+   
+/**********************
+ Seccion del formulario 
+***********************/
+
+.accordion li{
+    list-style:none;
+    width: 100%;
+    height:auto;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background:rgb(255, 244, 246);
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(228, 228, 228, 0.7);
+    margin-bottom: 30px;
+    grid-template-rows:
+    repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+    );
+}
+
+.accordion .contenidito{
+    display:grid;
+    padding: 0 10px;
+    line-height: 36px;
+    max-height: 0;
+    overflow-y: scroll;
+    transition: max-height 0.5s, padding 0.5s;
+    flex-wrap: nowrap;
+    gap: 1em;
+    height:auto;
+    justify-items: center;
+}
+
+.accordion input[type="radio"]:checked + label + .contenidito{
+    max-height: 400px;
+    padding: 0px 10px 20px; 
+}
+
+
+.lugar-botones{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper{
+    width: 300px;
+    background: #fff;
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    height: 100px;
+    display: flex;
+}
+
+.wrapper .input-data{
+    height: 40px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 40px;
+    z-index: 999;
+}
+
+.wrapper .input-data input,
+.wrapper .input-data select{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 17px;
+    appearance: none;
+    background-color: transparent;
+    
+}
+
+.wrapper .input-data select ~ option,
+.input-data input:focus ~ label,
+.input-data input:valid ~ label,
+.input-data select:focus ~ label,
+.input-data select option:checked ~ label {
+    transform: translateY(-20px);
+    font-size: 15px;
+    color: #DD5977ff;
+}
+
+.wrapper .input-data label{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: grey;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.wrapper .input-data .underline{
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+} 
+
+.input-data .underline:before{
+    position:absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #DD5977ff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before {
+    transform: scaleX(1);
+}
+
+/**********************
+ Seccion del boton
+***********************/
+
+.btn{
+    color: #fff;
+    margin:25px;
+    border-radius: 10px;
+    content: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px; 
+    height: 50px;
+    background-image: linear-gradient(90deg, #DD5977ff, rgb(255, 56, 102), rgb(255, 56, 102), #DD5977ff, rgb(255, 56, 102), rgb(255, 56, 102), #DD5977ff, rgb(138, 48, 255));
+    background-size: 300%;
+    transition: all 0.6s ease;
+    filter:opacity(.3)
+    
+}
+
+.btn:hover{
+    background-position: 100%;
+    filter:opacity(1);
+}
+
+.notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f44336;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+  }

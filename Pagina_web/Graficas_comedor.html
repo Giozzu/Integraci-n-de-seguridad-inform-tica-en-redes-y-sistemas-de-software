@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Paginas.css">
+    <link rel="stylesheet" href="CSS/Graficas_comedor.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,200;0,400;0,800;1,800&display=swap" rel="stylesheet">
+    <link rel="icon" href="Recursos/iconos/favicon-80x56.png">
+    <title>Gráficas por comedor</title>
+        <!-- Gráficas -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="JS/graficas_comedor.js"></script>
+</head>
+<body>
+
+    <!-- Título-->
+    <div class="cursor"></div>
+    <div class="shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    <div class="titulo"> 
+        <h1>Gráficas por comedor</h1>
+    </div>
+
+    <!-- Menu desplegable -->
+    <div class="contenedor">
+        <img id="Logo" src="Recursos/Imagenes/Logo.webp" width="35%" id="img_Logo_Inicio">
+        <nav class="barra"?>
+            <ul class="lista-barra">
+                <li class="elemento-lista opciones">    <!-- Lista desplegable de gráficas -->
+                    <a href="#">Indicadores
+                        <svg class="icono-desplegable" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M7 10l5 5 5-5H7z"/></svg>
+                    </a>
+                    <ul class="desplegar">
+                        <li>    <!-- Pantalla de gráficas generales -->
+                            <a href="Graficas_comedores.html">General</a>
+                        </li>
+                        <li>    <!-- Pantalla de gráficas por comedor -->
+                            <a href="Graficas_comedor.html">Por comedor</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="elemento-lista opciones">      
+                    <a href="#">Administracion
+                        <svg class="icono-desplegable" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M7 10l5 5 5-5H7z"/></svg>
+                    </a>
+                    <ul class="desplegar">
+                        <li>    <!-- Pantalla de administracion de encargados -->
+                            <a href="Administracion_encargados.html">Encargados</a>
+                        </li>
+                        <li>    <!-- Pantalla de administracion de supervisores -->
+                            <a href="Administracion_supervisores.html">Supervisores</a>
+                        </li>
+                        <li>    <!-- Pantalla de administracion de comedores -->
+                            <a href="Administracion_comedores.html">Comedores</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="seleccionar-comedor">
+        <select id="comedorSelect">
+            <option value="valor">Selecciona un comedor</option>
+        </select>
+    </div>
+
+    <ul class="accordion">
+        <li>
+            <input type="radio" name="accordion" id="first">
+            <label for="first">Asistencias en el día</label>
+            <div class="content">
+                <div id="mayor_asistencia" style="width: 900px; height: 500px;"></div>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="accordion" id="second">
+            <label for="second">Porcentaje de población</label>
+            <div class="content">
+                <div id="porcentaje_poblacion" style="width: 900px; height: 500px;"></div>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="accordion" id="third">
+            <label for="third">Asistencias totales</label>
+            <div class="content">
+                <div id="asistencias_totales" style="width: 900px; height: 300px;"></div>              
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="accordion" id="fourth">
+            <label for="fourth">Raciones donadas</label>
+            <div class="content">
+                <div id="raciones_donadas" style="width: 900px; height: 500px;"></div>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="accordion" id="fifth">
+            <label for="fifth">Reporte de Encuestas</label>
+            <div class="content">
+                <div id="encuestas" style="width: 900px; height: 500px;"></div>
+            </div>
+        </li>
+    </ul>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="JS/disenio.js"></script>
+
+</body>
+</html>

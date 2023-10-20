@@ -1,0 +1,175 @@
+
+
+
+/********************
+ Título de la página
+*********************/
+
+.shapes{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background:#6B4996ff;
+    overflow: hidden;
+}
+  
+.shape{
+    will-change: transform;
+    position: absolute;
+    border-radius: 50%;
+}
+
+
+.shape.shape-1{
+    background: linear-gradient(
+        135deg, #6B4996ff, rgb(64, 137, 255), rgb(64, 137, 255), rgb(138, 48, 255), rgb(255, 56, 102), rgb(64, 137, 255), rgb(64, 137, 255), rgb(138, 48, 255));;
+    width: 650px;
+    height: 650px;
+    margin: -325px 0 0 -325px;
+}
+
+.shape.shape-2{
+    background:linear-gradient(
+        135deg, #6B4996ff, rgb(64, 137, 255), rgb(64, 137, 255), rgb(138, 48, 255), rgb(255, 56, 102), rgb(64, 137, 255), rgb(64, 137, 255), rgb(138, 48, 255));;
+    width: 440px;
+    height: 440px;
+    margin: -220px 0 0 -220px;
+}
+
+.shape.shape-3 {
+    background: linear-gradient(
+        135deg, rgb(255, 56, 102), rgb(64, 137, 255), rgb(64, 137, 255), rgb(138, 48, 255), rgb(255, 56, 102), rgb(64, 137, 255), rgb(64, 137, 255), rgb(138, 48, 255));
+    width: 270px;
+    height: 270px;
+    margin: -135px 0 0 -135px;
+}
+  
+.titulo{
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: #fff;
+    mix-blend-mode: screen;
+}
+  
+h1{
+    font-size: 100px;
+    color: #000;
+    margin: 0;
+    text-align: center;
+}
+  
+.cursor{
+    position: fixed;
+    background: rgb(195, 255, 56);
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border-radius: 50%;
+    will-change: transform;
+    user-select: none;
+    pointer-events: none;
+    z-index: 10000;
+  }
+  
+::selection{
+    color: #fff;
+    background: #2128bd;
+}
+
+/****************************
+ Create a nice looking select 
+*****************************/
+/* create a nice looking select */
+/* Style the select element */
+#comedorSelect {
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: none;
+  color: #333;
+  font-size: 16px;
+  padding: 8px 12px;
+  width: 50%;
+}
+
+.seleccionar-comedor{
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/**********************
+ Seccion del formulario 
+***********************/
+
+.accordion li{
+    list-style:none;
+    width: 100%;
+    margin: 20px;
+    height:auto;
+    padding: 10px;
+    border-radius: 10px;
+    background:rgb(255, 244, 246);
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(228, 228, 228, 0.7);
+    margin-bottom: 30px;
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(280px, 1fr)
+        );
+}
+
+.accordion .content{
+    display:grid;
+    justify-content: space-evenly;
+    padding: 0 10px;
+    line-height: 36px;
+    max-height: 0;
+    overflow-y: scroll;
+    transition: max-height 0.5s, padding 0.5s;
+    flex-wrap: nowrap;
+    gap: 2em;
+    height:auto;
+
+}
+
+#mayor_asistencia th,
+#mayor_asistencia td {
+  padding: 8px;
+  text-align: center;
+  vertical-align: middle;
+
+}
+
+#asistencias_totales th,
+#asistencias_totales td {
+  padding: 8px;
+  text-align: center;
+  vertical-align: middle;
+
+}
+
+#raciones_donadas th,
+#raciones_donadas td {
+  padding: 8px;
+  text-align: center;
+  vertical-align: middle;
+
+}
+
+#incidencias th,
+#incidencias td {
+  padding: 8px;
+  text-align: center;
+  vertical-align: middle;
+
+}

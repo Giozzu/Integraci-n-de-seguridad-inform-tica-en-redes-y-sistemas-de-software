@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />              <!-- Pagina responsiva / mobile first -->
+    <title>Inicio de sesión</title>
+    <link rel="stylesheet" href="CSS/InicioSesion.css">
+    <!-- Noto Sans Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,200;0,400;0,800;1,800&display=swap" rel="stylesheet">
+    <link rel="icon" href="Recursos/iconos/favicon-80x56.png">
+    <script src="JS/iniciar_sesion.js"></script>
+</head>
+<body>
+    <img src="Recursos/Imagenes/Logo.webp" id="img_logo_inicio">  
+    <img src="Recursos/Imagenes/escudo-atz.webp" id="img_escudo">
+    <div class="titulo">
+        <p class="gradiente-animacion" >Comedores</p>  
+        <p class="gradiente-animacion">Comunitarios</p>  
+    </div>
+             <!-- Logo de la empresa -->
+    <div class="izq">
+        <div class="error" id="cuadro_de_error">
+            <p id="texto_error">Datos incorrectos, vuelve a intenarlo</p>
+        </div>
+        <div class="wrapper"> <!-- Bloque para el inicio de sesion -->
+            <div class="input-data">
+                <input type="text" required id="usuario">
+                <div class="underline"></div>
+                <label>Usuario</label>
+            </div>
+            
+            <div class="input-data">
+                <input type="password" required id="contrasena">
+                <div class="underline"></div>
+                <label>Contraseña</label>
+            </div>
+            <div class="botoncito">
+                <button onclick="iniciar_sesion()" class="btn" id="btn_iniciar_sesion">
+                    Iniciar Sesión
+                </button>
+            </div>
+
+
+        </div>
+
+        <div>
+            <image id="Recursos/Imagenes/InicioSesion.webp"></image>
+        </div>
+
+    </div>  
+
+    
+</body>

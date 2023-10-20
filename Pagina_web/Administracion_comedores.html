@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Paginas.css">
+    <link rel="stylesheet" href="CSS/Administracion_comedores.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,200;0,400;0,800;1,800&display=swap" rel="stylesheet">
+    <link rel="icon" href="Recursos/iconos/favicon-80x56.png">
+    <title>Comedores</title>
+        <!-- Scripts para gráficas -->
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="JS/comedores.js"></script>
+
+</head>
+<body>
+
+    <!-- Título-->
+    <div class="cursor"></div>
+    <div class="shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    <div class="titulo"> 
+        <h1>Administración de comedores</h1>
+    </div>
+    
+     <!-- Menu desplegable -->
+    <div class="contenedor">
+        <img id="Logo" src="Recursos/Imagenes/Logo.webp" width="35%" id="img_Logo_Inicio">
+        <nav class="barra"?>
+            <ul class="lista-barra">
+            
+                <li class="elemento-lista opciones">    <!-- Lista desplegable de gráficas -->
+                    <a href="#">Indicadores
+                        <svg class="icono-desplegable" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M7 10l5 5 5-5H7z"/></svg>
+                    </a>
+                    <ul class="desplegar">
+                        <li>    <!-- Pantalla de gráficas generales -->
+                            <a href="Graficas_comedores.html">General</a>
+                        </li>
+                        <li>    <!-- Pantalla de gráficas por comedor -->
+                            <a href="Graficas_comedor.html">Por comedor</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="elemento-lista opciones">      
+                    <a href="#">Administracion
+                        <svg class="icono-desplegable" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M7 10l5 5 5-5H7z"/></svg>
+                    </a>
+                    <ul class="desplegar">
+                        <li>    <!-- Pantalla de administracion de encargados -->
+                            <a href="Administracion_encargados.html">Encargados</a>
+                        </li>
+                        <li>    <!-- Pantalla de administracion de supervisores -->
+                            <a href="Administracion_supervisores.html">Supervisores</a>
+                        </li>
+                        <li>    <!-- Pantalla de administracion de comedores -->
+                            <a href="Administracion_comedores.html">Comedores</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <ul class="accordion">
+        <li>
+            <input type="radio" name="accordion" id="fourth">
+            <label for="fourth">Visualizar</label>
+            <div class="contenidito">
+                <!-- tabla de visualización-->
+                
+                <div id="table_div"></div>
+                <div class="lugar-botones">
+                    <div class="botones">
+                        <a onclick="cambiarPagina(-1)" class="btn">Anterior</a>
+                    </div>
+                    <div class="botones">
+                        <a onclick="cambiarPagina(1)" class="btn">Siguiente</a>
+                    </div>
+                </div>
+                
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="accordion" id="first">
+            <label for="first">Agregar nuevo comedor</label>
+            <div class="content">
+                <!-- Contenido -->
+                <div class="wrapper"> <!-- Bloque para el inicio de sesion -->
+                    <div class="input-data">
+                        <input type="text" required id="com_correo_agregar">
+                        <div class="underline"></div>
+                        <label>Correo</label>
+                    </div>
+                </div>
+                <div class="wrapper"> <!-- Bloque para el inicio de sesion -->
+                    <div class="input-data">
+                        <input type="text" required id="com_nombre_agregar">
+                        <div class="underline"></div>
+                        <label>Nombre</label>
+                    </div>
+                </div>
+                <div class="wrapper"> <!-- Bloque para el inicio de sesion -->
+                    <div class="input-data">
+                        <input type="number" id="com_capacidad_agregar" min="50" max="500">
+                        <div class="underline"></div>
+                        <label>Capacidad</label>
+                    </div>
+                </div>
+                <div class="wrapper"> <!-- Bloque para el inicio de sesion -->
+                    <div class="input-data">
+                        <input type="text" required id="com_direccion_agregar">
+                        <div class="underline"></div>
+                        <label>Dirección</label>
+                    </div>
+                </div>
+                <div class="wrapper"> <!-- Bloque para el inicio de sesion -->
+                    <div class="input-data">
+                        <input type="text" pattern="[0-9]{10}" required id="com_telefono_agregar">
+                        <div class="underline"></div>
+                        <label>Telefono</label>
+                    </div>
+                </div>
+                <!--                    Boton                    -->
+                <div class="botones">
+                    <a onclick="agregar_comedor()" class="btn">Agregar</a>
+                </div>
+                <!-- fin del contenido-->
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="accordion" id="third">
+            <label for="third">Actualizar datos</label>
+            <div class="content">
+                 <!-- Contenido -->
+                 <div class="wrapper"> 
+                    <div class="input-data">
+                        <input type="number" id="com_id_actualizar">
+                        <div class="underline"></div>
+                        <label>ID</label>
+                    </div>
+                </div>
+                <div class="wrapper"> 
+                    <div class="input-data">
+                        <input type="text" required id="com_correo_actualizar">
+                        <div class="underline"></div>
+                        <label>Correo</label>
+                    </div>
+                </div>
+                <div class="wrapper"> 
+                    <div class="input-data">
+                        <select id="com_estado_actualizar">
+                            <option value="Cerrado">Cerrado</option>
+                            <option value="Abierto">Abierto</option>
+                        </select>
+                        <div class="underline"></div>
+                        <label>Estado</label>
+                    </div>
+                </div>
+                <div class="wrapper"> 
+                    <div class="input-data">
+                        <input type="text" required id="com_nombre_actualizar">
+                        <div class="underline"></div>
+                        <label>Nombre del comedor</label>
+                    </div>
+                </div>
+                <div class="wrapper"> 
+                    <div class="input-data">
+                        <input type="number" id="com_capacidad_actualizar" min="1920" max="2030">
+                        <div class="underline"></div>
+                        <label>capacidad</label>
+                    </div>
+                </div>
+                <div class="wrapper"> 
+                    <div class="input-data">
+                        <input type="text" required id="com_direccion_actualizar">
+                        <div class="underline"></div>
+                        <label>Correo</label>
+                    </div>
+                </div>
+                <div class="wrapper"> 
+                    <div class="input-data">
+                        <input type="tel" name="com_telefono_actualizar" pattern="[0-9]{10}" required id="com_telefono_actualizar">
+                        <div class="underline"></div>
+                        <label for="com_telefono_actualizar">Telefono</label>
+                    </div>
+                </div>
+                <!--                    Boton                    -->
+                <a onclick="actualizar_comedor()" class="btn btn1">Actualizar</a>
+                <!-- fin del contenido-->
+            </div>
+        </li>
+        
+    </ul>
+    
+    <!-- título -->
+    <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="JS/disenio.js"></script>
+
+   
+
+
+
+</body>
+
+
+</html>
