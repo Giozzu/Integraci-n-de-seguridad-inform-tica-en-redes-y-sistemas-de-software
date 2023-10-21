@@ -2,15 +2,24 @@ const express = require('express');
 const mssql = require('mssql');
 const cors = require('cors');
 const helmet = require('helmet');
+const fs = require('fs');
+const https = require('https');
+
+const certificate = fs.readFileSync('/etc/letsencrypt/live/platopatodose3.ddns.net/fullchain.pem', 'utf8')
+const privateKey = fs.readFileSync('/etc/letsencrypt/live/platopatodose3.ddns.net/privkey.pem', 'utf8')
+const credentials = { key: privateKey, cert: certificate}
+
 
 const port = 8080;
-const ipAddr = '3.95.129.111';
+const domain = 'platopatodose3.ddns.net';
 
 const app = express();
 app.use(express.static(__dirname + '/public'));
 app.use(express.json());
 app.use(helmet());
 app.use(cors());
+
+const httpsServer = https.createServer(credentials, app)
 
 const dbConfig = {
     user: process.env.MSSQL_USER,
@@ -175,7 +184,7 @@ app.post('/loginEncargado', async(req, res) => {
 
 
 // Insertar el Menú del día
-app.post('/insertaMenu', async(req, res) => {
+app.put('/insertaMenu', async(req, res) => {
   try {
     const {nombreCom, sopaArroz, platoFuerte, panTortilla, aguaDelDia, frijolesSalsa, fecha} = req.body;
     
@@ -189,7 +198,7 @@ app.post('/insertaMenu', async(req, res) => {
     request.input('AguaDelDia', mssql.VarChar(50), aguaDelDia);
     request.input('FrijolesSalsa', mssql.VarChar(50), frijolesSalsa);
     request.input('Fecha', mssql.Date, fecha);
-    const result = await request.execute('PROC_IMenu');
+    const result = await request.execute('PROC_AMenu');
     
     return res.status(200).json({message: 'Menú agregado'});
     
@@ -872,7 +881,6 @@ app.get('/estadoCom/:nombreCom', async (req, res) => {
 });
 
 
-
 /*---------------------- APLICACIÓN Y PÁGINA 404 -----------------------------*/
 
 
@@ -880,6 +888,6 @@ app.use((req, res) => {
   res.type('text/plain').status(404).send('404 - Not Found');
 });
 
-app.listen(port, () => console.log(
-  `Express started on http://${ipAddr}:${port}`
+httpsServer.listen(port, () => console.log(
+  `Express started on https://${domain}:${port}`
   + '\nPress Ctrl-C to terminate.'));
