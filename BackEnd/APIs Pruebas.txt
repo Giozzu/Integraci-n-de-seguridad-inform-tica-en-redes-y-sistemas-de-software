@@ -174,7 +174,7 @@ Probando los APIs....
 }
 
 
-**----------- |GERRY / BENNY| -----------**
+**----------- |BENNY| -----------**
 /actualizaEstadoCom
 {
     "nombreCom": "5 de Mayo",
@@ -235,9 +235,9 @@ Probando los APIs....
 
 /verMenu/Cerro Grande/2023-09-12
 
-/reporteIncidenciaCom/Cerro Grande/2023-09-20
+/reporteIncidenciaCom/Cerro Grande/2023-09-20 -- ANGELIU
 
-/correoAyuda
+/correoAyuda -- Toast / Alert
 
 /nombreComedores
 
