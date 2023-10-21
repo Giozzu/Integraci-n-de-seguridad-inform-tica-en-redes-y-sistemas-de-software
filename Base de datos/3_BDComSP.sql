@@ -470,19 +470,19 @@ BEGIN
 
     -- Raciones servidas pagadas
     INSERT INTO #Resultados (Valor)
-    SELECT COUNT(Raciones)
+    SELECT ISNULL(SUM(Raciones), 0)
     FROM Asistencia
     WHERE (IDComedor = @ComedorBusq) AND (IDTipoRacion = 1) AND (Fecha = @Fecha);
 
     -- Raciones donadas
     INSERT INTO #Resultados (Valor)
-    SELECT COUNT(Raciones)
+    SELECT ISNULL(SUM(Raciones), 0)
     FROM Asistencia
     WHERE (IDComedor = @ComedorBusq) AND (IDTipoRacion = 2) AND (Fecha = @Fecha);
 
     -- Número total de comensales
     INSERT INTO #Resultados (Valor)
-    SELECT COUNT(Raciones)
+    SELECT ISNULL(SUM(Raciones), 0)
     FROM Asistencia
     WHERE (IDComedor = @ComedorBusq) AND (Fecha = @Fecha);
 
