@@ -1,9 +1,19 @@
+-- ---------------------------------------------------------
+-- Nombre del Script: 2_BDComTRGS.sql
+-- Propósito: Creación de los Triggers para el modelado.
+-- Fecha de Creación: 2023-09-17
+-- Autor: Alfredo Azamar López
+-- ---------------------------------------------------------
+
 USE ComedorBD;
 GO
 
---TRIGGERS
 
---Trigger para encriptar la contraseña de los empleados 
+-- ---------------------------------------------------------
+-- Nombre del Trigger: TRG_Empleado_INSERT
+-- Propósito: Realizar la encriptación de la contraseña 
+--			  de los empleados.
+-- ---------------------------------------------------------
 CREATE OR ALTER TRIGGER TRG_Empleado_INSERT
 ON Empleado
 INSTEAD OF INSERT
@@ -40,7 +50,12 @@ BEGIN
 END;
 GO
 
---Trigger para el actualizado de la contraseña de un empleado
+
+-- ---------------------------------------------------------
+-- Nombre del Trigger: TRG_Empleado_Contra
+-- Propósito: Realizar la encriptación de la contraseña 
+--			  de los empleados al actualizar sus datos.
+-- ---------------------------------------------------------
 CREATE OR ALTER TRIGGER TRG_Empleado_Contra
 ON Empleado
 AFTER UPDATE
