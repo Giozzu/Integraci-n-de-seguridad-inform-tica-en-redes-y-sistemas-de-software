@@ -1,9 +1,10 @@
+// Autor: Ángel Armando Márquez Curiel
 
-/******************************************
- * Cargar la información de los comedores *
- ******************************************/
+/************************************************************************
+ * Cargar la información por comedor de asistencias del día del comedor *
+ ************************************************************************/
 
-const ipAddr = 'http://3.95.129.111:8080';
+const ipAddr = 'https://platopatodose3.ddns.net:8080';
 const hoy = new Date();
 const anio = hoy.getFullYear();
 const mes = (hoy.getMonth() + 1).toString().padStart(2, '0');
@@ -37,6 +38,10 @@ function rellenarComedor() {
     xhr.send();
 }
 
+/***************************************************
+ * Cambiar de comedor cada que el filtro se cambie *
+ ***************************************************/
+
 document.addEventListener('DOMContentLoaded', function () {
     var select = document.getElementById('comedorSelect');
 
@@ -56,9 +61,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-/**********************
- * Asistencia Comedor *
- **********************/
+/***********************************************
+ * Rellenar la tabla de asistencia del comedor *
+ ***********************************************/
 
 google.charts.load('current', {'packages':['table']});
 google.charts.setOnLoadCallback(asistenciaComedor);
@@ -96,9 +101,9 @@ function asistenciaComedor() {
   xhr.send()
 }
 
-/**********************
- * Población Comedor *
- **********************/
+/*************************************************
+ * Rellenar la tabla de la población del comedor *
+ *************************************************/
 
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(poblacionComedor);
@@ -131,9 +136,9 @@ function poblacionComedor() {
   xhr.send()
 }
 
-/***************************
- * Historial de Asistencia *
- ***************************/
+/*************************************************************
+ * Rellenar la tabla del historial de asistencia del comedor *
+ *************************************************************/
 
 google.charts.load('current', {'packages':['table']});
 google.charts.setOnLoadCallback(historialAsistencia);
@@ -167,9 +172,9 @@ function historialAsistencia() {
   xhr.send()
 }
 
-/**************************
- **** Raciones Donadas ****
- **************************/
+/*********************************************************
+ * Rellenar la tabla de las raciones donadas del comedor *
+ *********************************************************/
 
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(racionesDonadas);
@@ -204,9 +209,9 @@ function racionesDonadas() {
 }
 
 
-/**********************************
- ****** Reporte de Encuestas ******
- **********************************/
+/*************************************************************************
+ * Cargar la información de los reportes de incidencias de los comedores *
+ *************************************************************************/
 
 google.charts.load('current', {'packages':['table']});
 google.charts.setOnLoadCallback(reporteEncuestas);

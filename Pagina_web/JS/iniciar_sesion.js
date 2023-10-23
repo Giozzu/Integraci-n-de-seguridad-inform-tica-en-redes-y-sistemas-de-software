@@ -1,4 +1,11 @@
-const ipAdd = "http://3.95.129.111:8080"
+// Autor: Ángel Armando Márquez Curiel
+
+
+/*************************
+  Boton para inciar sesion 
+ *************************/
+
+const ipAddr = 'https://platopatodose3.ddns.net:8080';
 
 function iniciar_sesion() {
     const payLoad = JSON.stringify({
@@ -16,7 +23,7 @@ function iniciar_sesion() {
         cuadro_de_error.style.display = 'block';
       }
     };
-    xhr.open('POST', `${ipAdd}/loginSupervisor`);
+    xhr.open('POST', `${ipAddr}/loginSupervisor`);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(payLoad);
 }

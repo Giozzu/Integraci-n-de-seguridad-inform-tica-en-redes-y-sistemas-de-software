@@ -1,12 +1,5 @@
 
-
-
 body{
-    background-image: url(/Recursos/Imagenes/InicioSesion.webp);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-attachment: fixed;
-    background-size: 60%;
     margin:0;
     padding: 0;
     align-items: center;
@@ -14,11 +7,34 @@ body{
     font-family: 'Noto Sans';
 }
 
+
+.total{
+    display:flex;
+    flex-direction: row;
+    height:100vh;
+}
+
 .titulo{
-    display: grid;
-    margin-left: clamp(50px, 10px, 50%);
+    display:flex;   
+    justify-content: center;
     flex-direction: column;
 }
+
+.izq{
+    margin-top: 20px;
+    display:flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+}
+.der{
+    width: 60%;
+    
+    background-image: url('/Recursos/Imagenes/InicioSesion.webp');
+    background-size: cover;
+}
+
+
 
 
 .gradiente-animacion{
@@ -49,31 +65,37 @@ body{
     }
 }
 
- #img_logo_inicio{
-    
-    margin-left: 60px;
-    margin-top: 20px;
+.arribita{
+    display:flex;   
+    justify-content: center;
+    flex-direction: row;
     margin-bottom: 20px;
-    width:16%;  
+    gap: 3em;
+}
+
+#img_logo_inicio{
+    
+
+    width:36%;  
 }
 
 #img_escudo{
     
-    margin-left: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width:11%;
+
+    width:21%;
 }
 
 .wrapper{
-    width: 300px;
+    width: 70%;
+    max-width: 300px;
     background: #fff;
     padding: 30px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-    margin-left: 60px;
-    margin-top: 20px;
+    margin:20px;
     justify-items: center;
     align-items: center;
+    display: flex;
+    flex-direction:column;
 }
 
 .wrapper .input-data{
@@ -129,9 +151,9 @@ body{
     transform: scaleX(1);
 }
 
-/**********************
+/********
  Seccion del boton
-***********************/
+*********/
 .botoncito{
     margin-left: 60px;
     margin-right: 60px;
@@ -163,16 +185,16 @@ body{
     align-items: center;
 }
 
-/**********************
- ** Mensaje de error **
-***********************/
+/********
+ * Mensaje de error *
+*********/
 
 .error{
-    margin-left: 60px;
-    padding: 30px;
+    margin: 10px;
+    padding: 10px;
     border-style: dotted;
     display:none;
-    margin-right:800px;
+    
 }
 
 .texto_error{

@@ -1,5 +1,10 @@
+// Autor: Ángel Armando Márquez Curiel
 
-const ipAddr = 'http://3.95.129.111:8080';
+/***********************************************
+ * Cambiar página en la tabla de visualización *
+ ***********************************************/
+
+const ipAddr = 'https://platopatodose3.ddns.net:8080';
 
 function cambiarPagina(n) {
   const params = new URLSearchParams(window.location.search);
@@ -15,9 +20,10 @@ function cambiarPagina(n) {
 }
 
 
-/**************************
- * Tabla de visualización *
- **************************/
+/****************************************
+ * Tabla de visualización de encargados *
+ ****************************************/
+
 google.charts.load('current', {'packages':['table']});
 google.charts.setOnLoadCallback(drawTable);
 
@@ -54,9 +60,9 @@ function drawTable() {
   xhr.send();
 }
 
-/****************************
- * Agregar, actualizar, etc *
- ****************************/
+/*********************
+ * Agregar encargado *
+ *********************/
 
 function agregar_encargado() {
   nombre = enc_nombres_agregar.value,
@@ -91,6 +97,10 @@ function agregar_encargado() {
   }
 }
 
+/************************
+ * Actualizar encargado *
+ ************************/
+
 function actualizar_empleado() {
   idEmp = enc_id_actualizar.value,
   nombre = enc_nombres_actualizar.value,
@@ -123,6 +133,10 @@ function actualizar_empleado() {
       window.alert("Ingresa correctamente los datos");
   }
 }
+
+/**************************************
+ * Actualizar contraseña de encargado *
+ **************************************/
 
 function actualizar_contrasena() {
   idEmp = enc_idContra_actualizar.value,

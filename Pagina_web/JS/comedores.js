@@ -1,8 +1,11 @@
-/**************************
- * Tabla de visualización *
- **************************/
+// Autor: Ángel Armando Márquez Curiel
 
-const ipAddr = 'http://3.95.129.111:8080';
+/***********************************************
+ * Cambiar página en la tabla de visualización *
+ ***********************************************/
+
+const ipAddr = 'https://platopatodose3.ddns.net:8080';
+
 
 function cambiarPagina(n) {
     const params = new URLSearchParams(window.location.search);
@@ -17,6 +20,9 @@ function cambiarPagina(n) {
     drawTable();
   }
 
+/**************************
+ * Tabla de visualización *
+ **************************/
 
 google.charts.load('current', {'packages':['table']});
 google.charts.setOnLoadCallback(drawTable);
@@ -52,9 +58,11 @@ function drawTable() {
   xhr.open('GET', url);
   xhr.send();
 }
-/****************************
- * Agregar, actualizar, etc *
- ****************************/
+
+/*******************
+ * Agregar comedor *
+ *******************/
+
 function agregar_comedor() {
     correoEmp = com_correo_agregar.value,
     estadoCom = "Cerrado",
@@ -85,6 +93,10 @@ function agregar_comedor() {
         window.alert("Ingresa correctamente los datos");
     }
 }
+
+/**********************
+ * Actualizar comedor *
+ **********************/
 
 function actualizar_comedor() {
     idCom = com_id_actualizar.value,

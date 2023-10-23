@@ -1,8 +1,12 @@
-/*********************************
- ************ Columnas *********** 
- *********************************/
+// Autor: Ángel Armando Márquez Curiel
+
+// Autor: Ángel Armando Márquez Curiel
+
+/***************************************************************
+ * Cargar la información de los comedores con mayor asistencia *
+ ***************************************************************/
  
- const ipAddr = 'http://3.95.129.111:8080';
+ const ipAddr = 'https://platopatodose3.ddns.net:8080';
  
 const hoy = new Date();
 const anio = hoy.getFullYear();
@@ -45,9 +49,9 @@ console.log(fechaFormato)
  }
 
 
-/**********************************
- ************ Pie Chart *********** 
- **********************************/
+/****************************************************************************
+ * Cargar la información de las raciones pagadas y donadas de los comedores *
+ ****************************************************************************/
 
 google.charts.load("current", {packages:["corechart"]});
 google.charts.setOnLoadCallback(raciones);
@@ -76,9 +80,9 @@ function raciones() {
   xhr.send()
 }
 
-/************************************
- ************ Pie Chart 2 *********** 
- ************************************/
+/******************************************************************
+ * Cargar la información de los grupos de edades de los comedores *
+ ******************************************************************/
 
  google.charts.load("current", {packages:["corechart"]});
  google.charts.setOnLoadCallback(gruposEdades);
@@ -109,9 +113,9 @@ function raciones() {
  }
 
 
- /***********************************
- ************ Pie Chart 3 *********** 
- ************************************/
+/***********************************************************************
+ * Cargar la información de la diversidad demográfica de los comedores *
+ ***********************************************************************/
 
  google.charts.load("current", {packages:["corechart"]});
  google.charts.setOnLoadCallback(condiciones);
@@ -141,10 +145,9 @@ function raciones() {
    xhr.send()
  }
 
- 
-/************************************
- ****** Reporte de Incidencias ******
- ************************************/
+/******************************************************************
+ * Rellenar la tabla de los reportes de incidencias en el comedor *
+ ******************************************************************/
 
 google.charts.load('current', {'packages':['table']});
 google.charts.setOnLoadCallback(reporteIncidencia);

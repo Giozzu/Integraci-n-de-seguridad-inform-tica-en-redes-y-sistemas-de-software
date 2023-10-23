@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+
+<!-- HTML creado por Ángel Armando Márquez Curiel -->
+
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -14,43 +17,39 @@
     <script src="JS/iniciar_sesion.js"></script>
 </head>
 <body>
-    <img src="Recursos/Imagenes/Logo.webp" id="img_logo_inicio">  
-    <img src="Recursos/Imagenes/escudo-atz.webp" id="img_escudo">
-    <div class="titulo">
-        <p class="gradiente-animacion" >Comedores</p>  
-        <p class="gradiente-animacion">Comunitarios</p>  
+    <div class="total">
+        <div class="izq">
+            <div class="arribita"> 
+                <img src="Recursos/Imagenes/Logo.webp" id="img_logo_inicio">  
+                <img src="Recursos/Imagenes/escudo-atz.webp" id="img_escudo">
+            </div>
+            <div class="titulo">
+                <p class="gradiente-animacion" >Comedores</p>  
+                <p class="gradiente-animacion">Comunitarios</p>  
+            </div>
+            <div class="error" id="cuadro_de_error">
+                <p id="texto_error">Datos incorrectos, vuelve a intenarlo</p>
+            </div>
+            <div class="wrapper"> <!-- Bloque para el inicio de sesion -->
+                <div class="input-data">
+                    <input type="text" required id="usuario">
+                    <div class="underline"></div>
+                    <label>Usuario</label>
+                </div>
+                
+                <div class="input-data">
+                    <input type="password" required id="contrasena">
+                    <div class="underline"></div>
+                    <label>Contraseña</label>
+                </div>
+                <div class="botoncito">
+                    <button onclick="iniciar_sesion()" class="btn" id="btn_iniciar_sesion">
+                        Iniciar Sesión
+                    </button>
+                </div>
+
+            </div>
+        </div>
+        <div class="der"></image></div>
     </div>
-             <!-- Logo de la empresa -->
-    <div class="izq">
-        <div class="error" id="cuadro_de_error">
-            <p id="texto_error">Datos incorrectos, vuelve a intenarlo</p>
-        </div>
-        <div class="wrapper"> <!-- Bloque para el inicio de sesion -->
-            <div class="input-data">
-                <input type="text" required id="usuario">
-                <div class="underline"></div>
-                <label>Usuario</label>
-            </div>
-            
-            <div class="input-data">
-                <input type="password" required id="contrasena">
-                <div class="underline"></div>
-                <label>Contraseña</label>
-            </div>
-            <div class="botoncito">
-                <button onclick="iniciar_sesion()" class="btn" id="btn_iniciar_sesion">
-                    Iniciar Sesión
-                </button>
-            </div>
-
-
-        </div>
-
-        <div>
-            <image id="Recursos/Imagenes/InicioSesion.webp"></image>
-        </div>
-
-    </div>  
-
-    
 </body>

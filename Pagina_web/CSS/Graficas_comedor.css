@@ -166,8 +166,9 @@ h1{
 
 }
 
-#incidencias th,
-#incidencias td {
+
+#encuestas th,
+#encuestas td {
   padding: 8px;
   text-align: center;
   vertical-align: middle;

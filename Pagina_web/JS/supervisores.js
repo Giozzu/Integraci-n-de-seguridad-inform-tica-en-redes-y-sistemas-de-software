@@ -1,5 +1,10 @@
+// Autor: Ángel Armando Márquez Curiel
 
-const ipAdd = "http://3.95.129.111:8080"
+/**********************************
+ * Cambiar pagina de supervisores *
+ **********************************/
+
+const ipAddr = 'https://platopatodose3.ddns.net:8080';
 
 function cambiarPagina(n) {
     const params = new URLSearchParams(window.location.search);
@@ -28,7 +33,7 @@ function drawTable() {
   const page = params.get('page') ?? 1;
   var data = new google.visualization.DataTable();
   const xhr = new XMLHttpRequest();
-  const url = `${ipAdd}/supervisoresInfo/${page}`;
+  const url = `${ipAddr}/supervisoresInfo/${page}`;
   xhr.onload = () => {
     
     const jsonData = JSON.parse(xhr.responseText);
@@ -54,9 +59,9 @@ function drawTable() {
   xhr.send();
 }
 
-/****************************
- * Agregar, actualizar, etc *
- ****************************/
+/**********************
+ * Agregar supervisor *
+ **********************/
 
 function agregar_supervisor() {
     nombre = sup_nombres_agregar.value,
@@ -91,6 +96,9 @@ function agregar_supervisor() {
     }
 }
 
+/*************************
+ * Actualizar supervisor *
+ *************************/
 
 function actualizar_supervisor() {
     idEmp = sup_id_actualizar.value,
@@ -125,6 +133,10 @@ function actualizar_supervisor() {
     }
 }
 
+/****************************************
+ * Actualizar contrasenia de supervisor *
+ ****************************************/
+
 function actualizar_contrasena() {
     idEmp = sup_idContra_actualizar.value,
     contra = sup_contra_actualizar.value
@@ -149,6 +161,10 @@ function actualizar_contrasena() {
         window.alert("Ingresa correctamente los datos");
     }
 }
+
+/***********************
+ * Eliminar supervisor *
+ ***********************/
 
 function eliminar_empleado() {
     nombre = sup_nombre_baja.value
