@@ -1,5 +1,10 @@
--- RETO: Código para la Base de Datos.
--- Equipo 3
+-- ---------------------------------------------------------
+-- Nombre del Script: 1_BDComDDL.sql
+-- Propósito: Creación de la estructura de la Base de Datos
+--			  del proyecto Plato DIF-F.
+-- Fecha de Creación: 2023-09-16
+-- Autor: Alfredo Azamar López
+-- ---------------------------------------------------------
 
 Use master;
 GO
@@ -13,8 +18,6 @@ END;
 CREATE DATABASE ComedorBD;
 GO
 
-
--- DDL (Definición de la estructura)
 
 USE ComedorBD;
 GO
@@ -35,35 +38,59 @@ DROP TABLE IF EXISTS CondicionComensal;
 DROP TABLE IF EXISTS Asistencia;
 
 
--- Catálogo de Estados que tiene un comedor
+-- ---------------------------------------------------------
+-- Nombre de la Tabla: EstadoComedor
+-- Propósito: Almacena información relacionada al estado
+--		      de apertura de un comedor.
+-- ---------------------------------------------------------
 CREATE TABLE EstadoComedor (
 	IDEstadoComedor INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	Nombre VARCHAR(30) NOT NULL UNIQUE
 );
 GO
 
--- Catálogo del Tipo de Ración que puede adquirir un comensal
+
+-- ---------------------------------------------------------
+-- Nombre de la Tabla: TipoRacion
+-- Propósito: Almacena información relacionada al tipo de 
+--		      ración que puede adquirir un comensal
+-- ---------------------------------------------------------
 CREATE TABLE TipoRacion (
 	IDTipoRacion INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	Tipo VARCHAR(20) NOT NULL UNIQUE
 );
 GO
 
--- Catálogo para el campo "Sexo" para los comensales 
+
+-- ---------------------------------------------------------
+-- Nombre de la Tabla: Sexo
+-- Propósito: Almacena información sobre el sexo de una 
+--			  persona 
+-- ---------------------------------------------------------
 CREATE TABLE Sexo (
 	IDSexo INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	Descripcion VARCHAR(30) NOT NULL UNIQUE
 );
 GO
 
--- Catálogo de Condiciones para los comensales 
+
+-- ---------------------------------------------------------
+-- Nombre de la Tabla: Condicion
+-- Propósito: Almacena información sobre las situaciones 
+--			  vulnerables existentes
+-- ---------------------------------------------------------
 CREATE TABLE Condicion (
 	IDCondicion INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	Nombre VARCHAR(30) NOT NULL UNIQUE
 );
 GO
 
--- Catálogo de las Preguntas para la encuesta 
+
+-- ---------------------------------------------------------
+-- Nombre de la Tabla: Pregunta
+-- Propósito: Almacena información sobre las preguntas de 
+--			  las encuestas
+-- ---------------------------------------------------------
 CREATE TABLE Pregunta (
 	IDPregunta INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	Pregunta VARCHAR(60) NOT NULL
@@ -71,14 +98,23 @@ CREATE TABLE Pregunta (
 GO
 
 
--- Catálogo de  para los empleados 
+-- ---------------------------------------------------------
+-- Nombre de la Tabla: Rol
+-- Propósito: Almacena información relacionada al rol de un 
+--			  empleado dentro del proyecto “Comedores 
+--			  Comunitarios” del DIF
+-- ---------------------------------------------------------
 CREATE TABLE Rol (
 	IDRol INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	Nombre VARCHAR(30) NOT NULL UNIQUE
 );
 GO
 
--- Catálogo de Empleados
+
+-- ---------------------------------------------------------
+-- Nombre de la Tabla: Empleado
+-- Propósito: Almacena información relacionada a los empleados
+-- ---------------------------------------------------------
 CREATE TABLE Empleado (
 	IDEmpleado INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	IDRol INT NOT NULL,
@@ -103,7 +139,12 @@ CREATE TABLE Empleado (
 );
 GO
 
--- Catálogo de Comedores 
+
+-- ---------------------------------------------------------
+-- Nombre de la Tabla: Comedor
+-- Propósito: Almacena información relacionada a los 
+--			  comedores comunitarios
+-- ---------------------------------------------------------
 CREATE TABLE Comedor (
 	IDComedor INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	IDEmpleado INT NOT NULL,
@@ -126,7 +167,11 @@ CREATE TABLE Comedor (
 );
 GO
 
--- Tabla para el Menú
+-- ---------------------------------------------------------
+-- Nombre de la Tabla: Menu
+-- Propósito: Almacena información relacionada al menú de 
+--			  comida servida dentro de los comedores
+-- ---------------------------------------------------------
 CREATE TABLE Menu (
 	IDMenu INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	IDComedor INT NOT NULL, 
@@ -145,7 +190,12 @@ CREATE TABLE Menu (
 ); 
 GO
 
---Tabla para levantar una Incidencia sobre el comedor
+
+-- ---------------------------------------------------------
+-- Nombre de la Tabla: Incidencia
+-- Propósito: Almacena información relacionada a las 
+--			  incidencias de un comedor
+-- ---------------------------------------------------------
 CREATE TABLE Incidencia (
 	IDIncidencia INT NOT NULL PRIMARY KEY IDENTITY (1,1),
 	IDComedor INT NOT NULL, 
@@ -160,7 +210,10 @@ CREATE TABLE Incidencia (
 );
 GO
 
---Tabla de las encuestas
+-- ---------------------------------------------------------
+-- Nombre de la Tabla: Encuesta
+-- Propósito: Almacena información relacionada a las encuestas
+-- ---------------------------------------------------------
 CREATE TABLE Encuesta (
 	IDEncuesta INT NOT NULL PRIMARY KEY IDENTITY (1,1),
 	IDComedor INT NOT NULL, 
@@ -181,7 +234,10 @@ CREATE TABLE Encuesta (
 );
 GO
 
--- Tabla para el registro de los Comensales
+-- ---------------------------------------------------------
+-- Nombre de la Tabla: Comensal
+-- Propósito: Almacena información relacionada a los comensales
+-- ---------------------------------------------------------
 CREATE TABLE Comensal (
 	IDComensal INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 
@@ -200,7 +256,11 @@ CREATE TABLE Comensal (
 );
 GO
 
--- Tabla para el registro de más de una Condición -> comensal
+-- ---------------------------------------------------------
+-- Nombre de la Tabla: CondicionComensal
+-- Propósito: Almacena información sobre las situaciones 
+--			  vulnerables de un comensal
+-- ---------------------------------------------------------
 CREATE TABLE CondicionComensal (
 	IDComensal INT NOT NULL,
 	IDCondicion INT NOT NULL,
@@ -219,7 +279,10 @@ CREATE TABLE CondicionComensal (
 GO
 
 
--- Tabla para la toma de Asistencia
+-- ---------------------------------------------------------
+-- Nombre de la Tabla: Asistencia
+-- Propósito: Almacena información sobre el registro de asistencia
+-- ---------------------------------------------------------
 CREATE TABLE Asistencia (
 	IDAsistencia INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	IDComedor INT NOT NULL, 
