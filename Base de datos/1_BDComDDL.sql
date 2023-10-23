@@ -3,7 +3,9 @@
 -- Propósito: Creación de la estructura de la Base de Datos
 --			  del proyecto Plato DIF-F.
 -- Fecha de Creación: 2023-09-16
--- Autor: Alfredo Azamar López
+-- Autores: 
+-- Alfredo Azamar López
+-- Gerardo Ríos Mejía
 -- ---------------------------------------------------------
 
 Use master;
