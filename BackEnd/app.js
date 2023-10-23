@@ -1,3 +1,10 @@
+/**
+ * Autores:
+ * 
+ * Alfredo Azamar López
+ * Héctor González Sánchez
+ */
+
 const express = require('express');
 const mssql = require('mssql');
 const cors = require('cors');
